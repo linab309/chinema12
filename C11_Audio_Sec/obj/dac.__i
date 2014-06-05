@@ -1,0 +1,5 @@
+ --thumb -c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\Sourcecode\driver 
+-I c:\Keil\ARM\RV31\INC 
+-I c:\Keil\ARM\CMSIS\Include 
+-I c:\Keil\ARM\Inc\Philips 
+-o ".\obj\dac.o" --omf_browse ".\obj\dac.crf" --depend ".\obj\dac.d" "Sourcecode\driver\dac.c"

@@ -1,0 +1,9 @@
+.\obj\debug.o: Sourcecode\main\debug.c
+.\obj\debug.o: Sourcecode\main\macro.h
+.\obj\debug.o: Sourcecode\main\..\driver\uart.h
+.\obj\debug.o: Sourcecode\main\message.h
+.\obj\debug.o: Sourcecode\main\debug.h
+.\obj\debug.o: Sourcecode\main\task.h
+.\obj\debug.o: c:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\obj\debug.o: c:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\obj\debug.o: c:\Keil\ARM\ARMCC\bin\..\include\stdarg.h

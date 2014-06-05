@@ -1,0 +1,160 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (Target 1), 0x0004 // Tools: 'ARM-ADS'
+
+Group (startup)
+Group (main)
+Group (driver)
+Group (cs495300)
+
+File 1,2,<.\Sourcecode\startup\LPC2300.s><LPC2300.s>
+File 2,1,<.\Sourcecode\main\main.c><main.c>
+File 2,1,<.\Sourcecode\main\debug.c><debug.c>
+File 2,1,<.\Sourcecode\main\queue.c><queue.c>
+File 2,1,<.\Sourcecode\main\c11_msg_handler.c><c11_msg_handler.c>
+File 2,1,<.\Sourcecode\main\key_tab.c><key_tab.c>
+File 2,1,<.\Sourcecode\main\key_task.c><key_task.c>
+File 2,1,<.\Sourcecode\main\Menu_tbl.c><Menu_tbl.c>
+File 2,1,<.\Sourcecode\main\message.c><message.c>
+File 2,1,<.\Sourcecode\main\rs232_protocol.c><rs232_protocol.c>
+File 2,1,<.\Sourcecode\main\setup_func.c><setup_func.c>
+File 2,1,<.\Sourcecode\main\setup_menu.c><setup_menu.c>
+File 2,1,<.\Sourcecode\main\task.c><task.c>
+File 2,1,<.\Sourcecode\main\vfd_disp.c><vfd_disp.c>
+File 2,1,<.\Sourcecode\main\Zone1_task.c><Zone1_task.c>
+File 2,1,<.\Sourcecode\main\zone2_task.c><zone2_task.c>
+File 2,1,<.\Sourcecode\main\auto_sound.c><auto_sound.c>
+File 2,1,<.\Sourcecode\main\radio_task.c><radio_task.c>
+File 3,1,<.\Sourcecode\driver\uart.c><uart.c>
+File 3,1,<.\Sourcecode\driver\cs8416.c><cs8416.c>
+File 3,1,<.\Sourcecode\driver\dac.c><dac.c>
+File 3,1,<.\Sourcecode\driver\eeprom.c><eeprom.c>
+File 3,1,<.\Sourcecode\driver\i2cdrv.c><i2cdrv.c>
+File 3,1,<.\Sourcecode\driver\ic165.c><ic165.c>
+File 3,1,<.\Sourcecode\driver\IC4094.c><IC4094.c>
+File 3,1,<.\Sourcecode\driver\Ioport.c><Ioport.c>
+File 3,1,<.\Sourcecode\driver\ir.c><ir.c>
+File 3,1,<.\Sourcecode\driver\timer.c><timer.c>
+File 3,1,<.\Sourcecode\driver\vfddriver.c><vfddriver.c>
+File 3,1,<.\Sourcecode\driver\mas9116.c><mas9116.c>
+File 3,1,<.\Sourcecode\driver\volume.c><volume.c>
+File 3,1,<.\Sourcecode\driver\max335.c><max335.c>
+File 3,1,<.\Sourcecode\driver\channel.c><channel.c>
+File 3,1,<.\Sourcecode\driver\tuner.c><tuner.c>
+File 3,1,<.\Sourcecode\driver\hdmi.c><hdmi.c>
+File 3,1,<.\Sourcecode\driver\Dsp_Spi.c><Dsp_Spi.c>
+File 4,1,<.\Sourcecode\cs495300\AudioManager.c><AudioManager.c>
+File 4,1,<.\Sourcecode\cs495300\BassManager.c><BassManager.c>
+File 4,1,<.\Sourcecode\cs495300\DelayManager.c><DelayManager.c>
+File 4,1,<.\Sourcecode\cs495300\DolbyManager.c><DolbyManager.c>
+File 4,1,<.\Sourcecode\cs495300\DolbyProLogicII.c><DolbyProLogicII.c>
+File 4,1,<.\Sourcecode\cs495300\DolbyProLogicIIx.c><DolbyProLogicIIx.c>
+File 4,1,<.\Sourcecode\cs495300\Dsp_task.c><Dsp_task.c>
+File 4,1,<.\Sourcecode\cs495300\dspdrv.c><dspdrv.c>
+File 4,1,<.\Sourcecode\cs495300\DspInputOutputCfg.c><DspInputOutputCfg.c>
+File 4,1,<.\Sourcecode\cs495300\Eq_Manager.c><Eq_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\Irc1_Manager.c><Irc1_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\Irc2_Manager.c><Irc2_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\OS_Manager.c><OS_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\PCM_Manager.c><PCM_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\SignalGenerator.c><SignalGenerator.c>
+File 4,1,<.\Sourcecode\cs495300\DTS_ES_Manager.c><DTS_ES_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\DTS_Manager.c><DTS_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\DTS_NEO6_Manager.c><DTS_NEO6_Manager.c>
+File 4,1,<.\Sourcecode\cs495300\DolbyPlusManager.c><DolbyPlusManager.c>
+File 4,1,<.\Sourcecode\cs495300\DolbyTrueHD.c><DolbyTrueHD.c>
+File 4,1,<.\Sourcecode\cs495300\DSP_API.c><DSP_API.c>
+File 4,1,<.\Sourcecode\cs495300\DolbyHeadphone.c><DolbyHeadphone.c>
+
+
+Options 1,0,0  // Target 'Target 1'
+ Device (LPC2366)
+ Vendor (NXP (founded by Philips))
+ Cpu (IRAM(0x40000000-0x4000E7FF) IROM(0-0x3FFFF) CLOCK(12000000) CPUTYPE(ARM7TDMI))
+ FlashUt (LPC210x_ISP.EXE ("#H" ^X $D COM1: 38400 1))
+ StupF ("STARTUP\Philips\LPC2300.s" ("Philips LPC2300 Startup Code"))
+ FlashDR (UL2ARM(-U40296420 -O7 -S0 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP2_256 -FS00 -FL040000))
+ DevID (4151)
+ Rgf (LPC23xx.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿPhilips\)
+ OrgReg (ÿPhilips\)
+ TgStat=16
+ OutDir (.\obj\)
+ OutName (C11_Audio12)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\lst\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 1 <c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z>
+ RunUsr 1 1 <find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 243,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP (ARM7TDMI)
+ RVDEV ()
+ ADSTFLGA { 0,12,0,2,99,4,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,64,0,232,0,0 }
+ OCMADSIROM { 1,0,0,0,0,0,0,4,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,232,0,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN ()
+ ADSCUDEF ()
+ ADSCINCD (.\Sourcecode\driver)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x00000000)
+ ADSLDDA (0x40000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARM.DLL)(-cLPC2100)(DARMP.DLL)(-pLPC2366)(SARM.DLL)()(TARMP.DLL)(-pLPC2366)
+  OPTDBG 48125,0,()()()()()()()()()() (BIN\UL2ARM.DLL)()()()
+ FLASH1 { 2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (BIN\UL2ARM.DLL)
+ FLASH3 (LPC210x_ISP.EXE ("#H" ^X $D COM1: 38400 1))
+ FLASH4 ()
+EndOpt
+

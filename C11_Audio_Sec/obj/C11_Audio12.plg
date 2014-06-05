@@ -1,0 +1,977 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+I:\new C11A\Ö÷°åÈí¼þ\CS8416_AUDIO\C11_Audio_Sec_hdradio_newhardware\C11_Audio_Sec\C11_Audio.uvproj
+Project File Date:  09/30/2011
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling LPC2300.s...
+compiling main.c...
+Sourcecode\main\main.c(62): warning:  #174-D: expression has no effect
+Sourcecode\main\main.c(57): warning:  #550-D: variable "status" was set but never used
+compiling debug.c...
+compiling queue.c...
+compiling c11_msg_handler.c...
+compiling key_tab.c...
+compiling key_task.c...
+compiling Menu_tbl.c...
+compiling message.c...
+Sourcecode\main\message.c(20): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(24): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(59): warning:  #174-D: expression has no effect
+Sourcecode\main\message.c(74): warning:  #174-D: expression has no effect
+compiling rs232_protocol.c...
+Sourcecode\main\rs232_protocol.c(4815): warning:  #111-D: statement is unreachable
+Sourcecode\main\rs232_protocol.c(4840): warning:  #177-D: variable "bValue" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6194): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+Sourcecode\main\rs232_protocol.c(6516): warning:  #223-D: function "MaxVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6553): warning:  #223-D: function "SetMasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6587): warning:  #223-D: function "SetZ2MasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6573): warning:  #177-D: variable "max_vol_Eeprom" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6574): warning:  #177-D: variable "max_vol_value" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6575): warning:  #177-D: variable "temp_volume" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(7080): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling setup_func.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_func.c(1084): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\setup_func.c(1550): warning:  #940-D: missing return statement at end of non-void function "HDMIInAudioSetup"
+Sourcecode\main\setup_func.c(1581): warning:  #940-D: missing return statement at end of non-void function "CDPureAudio"
+Sourcecode\main\setup_func.c(1601): warning:  #940-D: missing return statement at end of non-void function "HDMIAUIDOOUT"
+Sourcecode\main\setup_func.c(1616): warning:  #223-D: function "SetMasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1648): warning:  #940-D: missing return statement at end of non-void function "MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1654): warning:  #223-D: function "SetZ2MasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1675): warning:  #940-D: missing return statement at end of non-void function "Z2MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1749): warning:  #940-D: missing return statement at end of non-void function "SetMaxVolumeLevel"
+compiling setup_menu.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_menu.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bMode" was set but never used
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bValue" was set but never used
+compiling task.c...
+compiling vfd_disp.c...
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(305): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1174): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1221): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1226): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1237): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1238): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1239): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1240): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1178): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1383): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1388): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(1415): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1419): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(2048): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(2004): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2349): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2698): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2756): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+compiling zone2_task.c...
+Sourcecode\main\zone2_task.c(75): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\zone2_task.c(88): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(92): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(115): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(119): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(161): warning:  #188-D: enumerated type mixed with another type
+compiling auto_sound.c...
+Sourcecode\main\..\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\main\auto_sound.c(352): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(522): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(710): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(914): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(1046): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(1165): warning:  #174-D: expression has no effect
+compiling radio_task.c...
+Sourcecode\main\radio_task.c(361): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(373): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(385): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(397): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(413): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(429): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(437): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(510): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(511): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(780): warning:  #192-D: unrecognized character escape sequence
+compiling uart.c...
+compiling cs8416.c...
+Sourcecode\driver\cs8416.c(48): warning:  #550-D: variable "IIC_Return" was set but never used
+compiling dac.c...
+Sourcecode\driver\dac.c(18): warning:  #223-D: function "SetIoport4" declared implicitly
+Sourcecode\driver\dac.c(62): warning:  #223-D: function "SetIoport2" declared implicitly
+Sourcecode\driver\dac.c(138): warning:  #223-D: function "SetSpkPhase" declared implicitly
+compiling eeprom.c...
+Sourcecode\driver\eeprom.c(39): warning:  #550-D: variable "IIC_Return" was set but never used
+compiling i2cdrv.c...
+compiling ic165.c...
+compiling IC4094.c...
+Sourcecode\driver\IC4094.c(242): warning:  #223-D: function "DelayMs" declared implicitly
+Sourcecode\driver\IC4094.c(274): warning:  #223-D: function "SetCurFocusTid" declared implicitly
+compiling Ioport.c...
+Sourcecode\driver\Ioport.c(1934): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\driver\Ioport.c(1935): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+compiling ir.c...
+compiling timer.c...
+Sourcecode\driver\timer.c(123): warning:  #223-D: function "MsgSetSoftMute" declared implicitly
+Sourcecode\driver\timer.c(174): warning:  #223-D: function "lpcm_20_config" declared implicitly
+Sourcecode\driver\timer.c(210): warning:  #223-D: function "debug_printf" declared implicitly
+compiling vfddriver.c...
+Sourcecode\driver\vfddriver.c(44): warning:  #550-D: variable "IIC_Return" was set but never used
+Sourcecode\driver\vfddriver.c(57): warning:  #550-D: variable "IIC_Return" was set but never used
+Sourcecode\driver\vfddriver.c(82): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(105): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling mas9116.c...
+Sourcecode\driver\mas9116.c(179): warning:  #111-D: statement is unreachable
+compiling volume.c...
+Sourcecode\driver\volume.c(119): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(120): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(121): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(122): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(129): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+Sourcecode\driver\volume.c(159): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(160): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(161): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(162): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(181): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+compiling max335.c...
+compiling channel.c...
+Sourcecode\driver\channel.c(77): warning:  #550-D: variable "result" was set but never used
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\hdmi.c(119): warning:  #550-D: variable "result" was set but never used
+Sourcecode\driver\hdmi.c(454): warning:  #223-D: function "SetMax335Switch" declared implicitly
+Sourcecode\driver\hdmi.c(455): warning:  #223-D: function "UpdateMax335" declared implicitly
+Sourcecode\driver\hdmi.c(464): warning:  #40-D: expected an identifier
+compiling Dsp_Spi.c...
+compiling tuner_new.c...
+Sourcecode\driver\tuner_new.c(610): warning:  #223-D: function "SaveRadioStatus" declared implicitly
+Sourcecode\driver\tuner_new.c(823): warning:  #223-D: function "RBDS_Decode" declared implicitly
+Sourcecode\driver\tuner_new.c(972): warning:  #223-D: function "memcpy" declared implicitly
+Sourcecode\driver\tuner_new.c(1245): warning:  #550-D: variable "msglength" was set but never used
+compiling rbds.c...
+compiling AudioManager.c...
+compiling BassManager.c...
+Sourcecode\cs495300\BassManager.c(788): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\BassManager.c(790): warning:  #188-D: enumerated type mixed with another type
+compiling DelayManager.c...
+compiling DolbyManager.c...
+compiling DolbyProLogicII.c...
+compiling DolbyProLogicIIx.c...
+compiling Dsp_task.c...
+Sourcecode\cs495300\Dsp_task.c(152): warning:  #223-D: function "AnalyseTureHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(158): warning:  #223-D: function "AnalyseDtsHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(164): warning:  #223-D: function "AnalyseDtsHRACfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(206): warning:  #223-D: function "MsgSetDspChannel" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(188): warning:  #177-D: variable "old_cd_pcm" was declared but never referenced
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(1224): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1274): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1341): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1680): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1685): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2270): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2313): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2309): warning:  #550-D: variable "ret" was set but never used
+Sourcecode\cs495300\dspdrv.c(2310): warning:  #177-D: variable "k" was declared but never referenced
+Sourcecode\cs495300\dspdrv.c(2449): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2450): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2451): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2483): warning:  #69-D: integer conversion resulted in truncation
+compiling DspInputOutputCfg.c...
+compiling Eq_Manager.c...
+compiling Irc1_Manager.c...
+compiling Irc2_Manager.c...
+compiling OS_Manager.c...
+compiling PCM_Manager.c...
+compiling SignalGenerator.c...
+compiling DTS_ES_Manager.c...
+compiling DTS_Manager.c...
+compiling DTS_NEO6_Manager.c...
+compiling DolbyPlusManager.c...
+compiling DolbyTrueHD.c...
+compiling DSP_API.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+compiling DolbyHeadphone.c...
+linking...
+Program Size: Code=133168 RO-data=7324 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 150 Warning(s).
+Build target 'Target 1'
+assembling LPC2300.s...
+compiling main.c...
+Sourcecode\main\main.c(62): warning:  #174-D: expression has no effect
+Sourcecode\main\main.c(57): warning:  #550-D: variable "status" was set but never used
+compiling debug.c...
+compiling queue.c...
+compiling c11_msg_handler.c...
+compiling key_tab.c...
+compiling key_task.c...
+compiling Menu_tbl.c...
+compiling message.c...
+Sourcecode\main\message.c(20): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(24): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(59): warning:  #174-D: expression has no effect
+Sourcecode\main\message.c(74): warning:  #174-D: expression has no effect
+compiling rs232_protocol.c...
+Sourcecode\main\rs232_protocol.c(4815): warning:  #111-D: statement is unreachable
+Sourcecode\main\rs232_protocol.c(4840): warning:  #177-D: variable "bValue" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6194): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+Sourcecode\main\rs232_protocol.c(6516): warning:  #223-D: function "MaxVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6553): warning:  #223-D: function "SetMasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6587): warning:  #223-D: function "SetZ2MasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6573): warning:  #177-D: variable "max_vol_Eeprom" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6574): warning:  #177-D: variable "max_vol_value" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6575): warning:  #177-D: variable "temp_volume" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(7080): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling setup_func.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_func.c(1084): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\setup_func.c(1550): warning:  #940-D: missing return statement at end of non-void function "HDMIInAudioSetup"
+Sourcecode\main\setup_func.c(1581): warning:  #940-D: missing return statement at end of non-void function "CDPureAudio"
+Sourcecode\main\setup_func.c(1601): warning:  #940-D: missing return statement at end of non-void function "HDMIAUIDOOUT"
+Sourcecode\main\setup_func.c(1616): warning:  #223-D: function "SetMasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1648): warning:  #940-D: missing return statement at end of non-void function "MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1654): warning:  #223-D: function "SetZ2MasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1675): warning:  #940-D: missing return statement at end of non-void function "Z2MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1749): warning:  #940-D: missing return statement at end of non-void function "SetMaxVolumeLevel"
+compiling setup_menu.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_menu.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bMode" was set but never used
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bValue" was set but never used
+compiling task.c...
+compiling vfd_disp.c...
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(305): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1174): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1221): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1226): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1237): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1238): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1239): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1240): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1178): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1383): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1388): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(1415): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1419): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(2048): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(2004): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2349): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2698): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2756): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+compiling zone2_task.c...
+Sourcecode\main\zone2_task.c(75): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\zone2_task.c(88): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(92): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(115): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(119): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(161): warning:  #188-D: enumerated type mixed with another type
+compiling auto_sound.c...
+Sourcecode\main\..\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\main\auto_sound.c(352): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(522): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(710): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(914): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(1046): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(1165): warning:  #174-D: expression has no effect
+compiling radio_task.c...
+Sourcecode\main\radio_task.c(361): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(373): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(385): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(397): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(413): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(429): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(437): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(510): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(511): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(780): warning:  #192-D: unrecognized character escape sequence
+compiling uart.c...
+compiling cs8416.c...
+Sourcecode\driver\cs8416.c(48): warning:  #550-D: variable "IIC_Return" was set but never used
+compiling dac.c...
+Sourcecode\driver\dac.c(18): warning:  #223-D: function "SetIoport4" declared implicitly
+Sourcecode\driver\dac.c(62): warning:  #223-D: function "SetIoport2" declared implicitly
+Sourcecode\driver\dac.c(138): warning:  #223-D: function "SetSpkPhase" declared implicitly
+compiling eeprom.c...
+Sourcecode\driver\eeprom.c(39): warning:  #550-D: variable "IIC_Return" was set but never used
+compiling i2cdrv.c...
+compiling ic165.c...
+compiling IC4094.c...
+Sourcecode\driver\IC4094.c(242): warning:  #223-D: function "DelayMs" declared implicitly
+Sourcecode\driver\IC4094.c(274): warning:  #223-D: function "SetCurFocusTid" declared implicitly
+compiling Ioport.c...
+Sourcecode\driver\Ioport.c(1934): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\driver\Ioport.c(1935): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+compiling ir.c...
+compiling timer.c...
+Sourcecode\driver\timer.c(123): warning:  #223-D: function "MsgSetSoftMute" declared implicitly
+Sourcecode\driver\timer.c(174): warning:  #223-D: function "lpcm_20_config" declared implicitly
+Sourcecode\driver\timer.c(210): warning:  #223-D: function "debug_printf" declared implicitly
+compiling vfddriver.c...
+Sourcecode\driver\vfddriver.c(44): warning:  #550-D: variable "IIC_Return" was set but never used
+Sourcecode\driver\vfddriver.c(57): warning:  #550-D: variable "IIC_Return" was set but never used
+Sourcecode\driver\vfddriver.c(82): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(105): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling mas9116.c...
+Sourcecode\driver\mas9116.c(179): warning:  #111-D: statement is unreachable
+compiling volume.c...
+Sourcecode\driver\volume.c(119): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(120): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(121): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(122): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(129): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+Sourcecode\driver\volume.c(159): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(160): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(161): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(162): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(181): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+compiling max335.c...
+compiling channel.c...
+Sourcecode\driver\channel.c(77): warning:  #550-D: variable "result" was set but never used
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\hdmi.c(119): warning:  #550-D: variable "result" was set but never used
+Sourcecode\driver\hdmi.c(454): warning:  #223-D: function "SetMax335Switch" declared implicitly
+Sourcecode\driver\hdmi.c(455): warning:  #223-D: function "UpdateMax335" declared implicitly
+Sourcecode\driver\hdmi.c(464): warning:  #40-D: expected an identifier
+compiling Dsp_Spi.c...
+compiling tuner_new.c...
+Sourcecode\driver\tuner_new.c(610): warning:  #223-D: function "SaveRadioStatus" declared implicitly
+Sourcecode\driver\tuner_new.c(823): warning:  #223-D: function "RBDS_Decode" declared implicitly
+Sourcecode\driver\tuner_new.c(972): warning:  #223-D: function "memcpy" declared implicitly
+Sourcecode\driver\tuner_new.c(1245): warning:  #550-D: variable "msglength" was set but never used
+compiling rbds.c...
+compiling AudioManager.c...
+compiling BassManager.c...
+Sourcecode\cs495300\BassManager.c(788): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\BassManager.c(790): warning:  #188-D: enumerated type mixed with another type
+compiling DelayManager.c...
+compiling DolbyManager.c...
+compiling DolbyProLogicII.c...
+compiling DolbyProLogicIIx.c...
+compiling Dsp_task.c...
+Sourcecode\cs495300\Dsp_task.c(152): warning:  #223-D: function "AnalyseTureHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(158): warning:  #223-D: function "AnalyseDtsHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(164): warning:  #223-D: function "AnalyseDtsHRACfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(206): warning:  #223-D: function "MsgSetDspChannel" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(188): warning:  #177-D: variable "old_cd_pcm" was declared but never referenced
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(1224): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1274): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1341): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1680): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1685): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2270): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2313): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2309): warning:  #550-D: variable "ret" was set but never used
+Sourcecode\cs495300\dspdrv.c(2310): warning:  #177-D: variable "k" was declared but never referenced
+Sourcecode\cs495300\dspdrv.c(2449): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2450): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2451): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2483): warning:  #69-D: integer conversion resulted in truncation
+compiling DspInputOutputCfg.c...
+compiling Eq_Manager.c...
+compiling Irc1_Manager.c...
+compiling Irc2_Manager.c...
+compiling OS_Manager.c...
+compiling PCM_Manager.c...
+compiling SignalGenerator.c...
+compiling DTS_ES_Manager.c...
+compiling DTS_Manager.c...
+compiling DTS_NEO6_Manager.c...
+compiling DolbyPlusManager.c...
+compiling DolbyTrueHD.c...
+compiling DSP_API.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+compiling DolbyHeadphone.c...
+linking...
+Program Size: Code=133168 RO-data=7324 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 150 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling debug.c...
+compiling c11_msg_handler.c...
+compiling key_task.c...
+compiling message.c...
+Sourcecode\main\message.c(20): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(24): warning:  #236-D: controlling expression is constant
+compiling rs232_protocol.c...
+Sourcecode\main\rs232_protocol.c(4815): warning:  #111-D: statement is unreachable
+Sourcecode\main\rs232_protocol.c(4840): warning:  #177-D: variable "bValue" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6194): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+Sourcecode\main\rs232_protocol.c(6516): warning:  #223-D: function "MaxVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6553): warning:  #223-D: function "SetMasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6587): warning:  #223-D: function "SetZ2MasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6573): warning:  #177-D: variable "max_vol_Eeprom" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6574): warning:  #177-D: variable "max_vol_value" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6575): warning:  #177-D: variable "temp_volume" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(7080): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling setup_func.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_func.c(1084): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\setup_func.c(1550): warning:  #940-D: missing return statement at end of non-void function "HDMIInAudioSetup"
+Sourcecode\main\setup_func.c(1581): warning:  #940-D: missing return statement at end of non-void function "CDPureAudio"
+Sourcecode\main\setup_func.c(1601): warning:  #940-D: missing return statement at end of non-void function "HDMIAUIDOOUT"
+Sourcecode\main\setup_func.c(1616): warning:  #223-D: function "SetMasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1648): warning:  #940-D: missing return statement at end of non-void function "MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1654): warning:  #223-D: function "SetZ2MasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1675): warning:  #940-D: missing return statement at end of non-void function "Z2MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1749): warning:  #940-D: missing return statement at end of non-void function "SetMaxVolumeLevel"
+compiling setup_menu.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_menu.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bMode" was set but never used
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bValue" was set but never used
+compiling task.c...
+compiling vfd_disp.c...
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(305): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1174): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1221): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1226): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1237): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1238): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1239): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1240): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1178): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1383): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1388): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(1415): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1419): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(2048): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(2004): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2349): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2698): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2756): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+compiling zone2_task.c...
+Sourcecode\main\zone2_task.c(75): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\zone2_task.c(88): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(92): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(115): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(119): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(161): warning:  #188-D: enumerated type mixed with another type
+compiling auto_sound.c...
+Sourcecode\main\..\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+compiling radio_task.c...
+Sourcecode\main\radio_task.c(361): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(373): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(385): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(397): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(413): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(429): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(437): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(510): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(511): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(780): warning:  #192-D: unrecognized character escape sequence
+compiling uart.c...
+compiling cs8416.c...
+compiling eeprom.c...
+compiling i2cdrv.c...
+compiling IC4094.c...
+Sourcecode\driver\IC4094.c(242): warning:  #223-D: function "DelayMs" declared implicitly
+Sourcecode\driver\IC4094.c(274): warning:  #223-D: function "SetCurFocusTid" declared implicitly
+compiling Ioport.c...
+Sourcecode\driver\Ioport.c(1934): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\driver\Ioport.c(1935): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+compiling ir.c...
+compiling vfddriver.c...
+Sourcecode\driver\vfddriver.c(82): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(105): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling mas9116.c...
+Sourcecode\driver\mas9116.c(179): warning:  #111-D: statement is unreachable
+compiling volume.c...
+Sourcecode\driver\volume.c(119): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(120): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(121): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(122): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(129): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+Sourcecode\driver\volume.c(159): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(160): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(161): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(162): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(181): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+compiling max335.c...
+compiling channel.c...
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\hdmi.c(454): warning:  #223-D: function "SetMax335Switch" declared implicitly
+Sourcecode\driver\hdmi.c(455): warning:  #223-D: function "UpdateMax335" declared implicitly
+Sourcecode\driver\hdmi.c(464): warning:  #40-D: expected an identifier
+compiling Dsp_Spi.c...
+compiling tuner_new.c...
+Sourcecode\driver\tuner_new.c(610): warning:  #223-D: function "SaveRadioStatus" declared implicitly
+Sourcecode\driver\tuner_new.c(823): warning:  #223-D: function "RBDS_Decode" declared implicitly
+Sourcecode\driver\tuner_new.c(972): warning:  #223-D: function "memcpy" declared implicitly
+Sourcecode\driver\tuner_new.c(1245): warning:  #550-D: variable "msglength" was set but never used
+compiling rbds.c...
+compiling AudioManager.c...
+compiling BassManager.c...
+Sourcecode\cs495300\BassManager.c(788): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\BassManager.c(790): warning:  #188-D: enumerated type mixed with another type
+compiling DelayManager.c...
+compiling Dsp_task.c...
+Sourcecode\cs495300\Dsp_task.c(152): warning:  #223-D: function "AnalyseTureHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(158): warning:  #223-D: function "AnalyseDtsHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(164): warning:  #223-D: function "AnalyseDtsHRACfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(206): warning:  #223-D: function "MsgSetDspChannel" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(188): warning:  #177-D: variable "old_cd_pcm" was declared but never referenced
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(1224): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1274): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1341): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1680): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1685): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2270): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2313): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2449): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2450): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2451): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2483): warning:  #69-D: integer conversion resulted in truncation
+compiling DspInputOutputCfg.c...
+compiling Eq_Manager.c...
+compiling Irc1_Manager.c...
+compiling Irc2_Manager.c...
+compiling DSP_API.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+linking...
+Program Size: Code=144836 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 126 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=144836 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(862): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1229): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1279): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1346): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1685): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1690): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2275): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2318): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2454): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2455): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2456): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2488): warning:  #69-D: integer conversion resulted in truncation
+linking...
+Program Size: Code=144880 RO-data=7324 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=144880 RO-data=7324 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(862): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1229): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1269): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1280): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1347): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1686): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1691): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2276): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2319): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2455): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2456): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2457): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2489): warning:  #69-D: integer conversion resulted in truncation
+linking...
+Program Size: Code=144908 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 17 Warning(s).
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(862): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1229): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1269): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1280): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1347): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1686): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1691): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2276): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2319): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2455): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2456): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2457): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2489): warning:  #69-D: integer conversion resulted in truncation
+linking...
+Program Size: Code=144924 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 17 Warning(s).
+Build target 'Target 1'
+compiling channel.c...
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(862): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1229): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1269): warning:  #192-D: unrecognized character escape sequence
+Sourcecode\cs495300\dspdrv.c(1280): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1347): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1686): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1691): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2276): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2319): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2455): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2456): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2457): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2489): warning:  #69-D: integer conversion resulted in truncation
+linking...
+Program Size: Code=144980 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 26 Warning(s).
+Build target 'Target 1'
+compiling channel.c...
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=144980 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling channel.c...
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=144976 RO-data=7324 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling setup_func.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_func.c(1085): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\setup_func.c(1551): warning:  #940-D: missing return statement at end of non-void function "HDMIInAudioSetup"
+Sourcecode\main\setup_func.c(1582): warning:  #940-D: missing return statement at end of non-void function "CDPureAudio"
+Sourcecode\main\setup_func.c(1602): warning:  #940-D: missing return statement at end of non-void function "HDMIAUIDOOUT"
+Sourcecode\main\setup_func.c(1617): warning:  #223-D: function "SetMasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1649): warning:  #940-D: missing return statement at end of non-void function "MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1655): warning:  #223-D: function "SetZ2MasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1676): warning:  #940-D: missing return statement at end of non-void function "Z2MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1750): warning:  #940-D: missing return statement at end of non-void function "SetMaxVolumeLevel"
+compiling zone2_task.c...
+Sourcecode\main\zone2_task.c(76): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\zone2_task.c(89): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(93): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(116): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(120): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(162): warning:  #188-D: enumerated type mixed with another type
+compiling channel.c...
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+linking...
+Program Size: Code=145004 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 26 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=145004 RO-data=7328 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+Sourcecode\main\main.c(62): warning:  #174-D: expression has no effect
+Sourcecode\main\main.c(57): warning:  #550-D: variable "status" was set but never used
+compiling debug.c...
+compiling c11_msg_handler.c...
+compiling key_task.c...
+compiling message.c...
+Sourcecode\main\message.c(20): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(24): warning:  #236-D: controlling expression is constant
+Sourcecode\main\message.c(59): warning:  #174-D: expression has no effect
+Sourcecode\main\message.c(74): warning:  #174-D: expression has no effect
+compiling rs232_protocol.c...
+Sourcecode\main\rs232_protocol.c(4815): warning:  #111-D: statement is unreachable
+Sourcecode\main\rs232_protocol.c(4840): warning:  #177-D: variable "bValue" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6194): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+Sourcecode\main\rs232_protocol.c(6516): warning:  #223-D: function "MaxVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6553): warning:  #223-D: function "SetMasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6587): warning:  #223-D: function "SetZ2MasterVolumeLevel" declared implicitly
+Sourcecode\main\rs232_protocol.c(6573): warning:  #177-D: variable "max_vol_Eeprom" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6574): warning:  #177-D: variable "max_vol_value" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(6575): warning:  #177-D: variable "temp_volume" was declared but never referenced
+Sourcecode\main\rs232_protocol.c(7080): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling setup_func.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_func.c(1085): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\setup_func.c(1551): warning:  #940-D: missing return statement at end of non-void function "HDMIInAudioSetup"
+Sourcecode\main\setup_func.c(1582): warning:  #940-D: missing return statement at end of non-void function "CDPureAudio"
+Sourcecode\main\setup_func.c(1602): warning:  #940-D: missing return statement at end of non-void function "HDMIAUIDOOUT"
+Sourcecode\main\setup_func.c(1617): warning:  #223-D: function "SetMasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1649): warning:  #940-D: missing return statement at end of non-void function "MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1655): warning:  #223-D: function "SetZ2MasterVolumeValue" declared implicitly
+Sourcecode\main\setup_func.c(1676): warning:  #940-D: missing return statement at end of non-void function "Z2MasterVolumeLevel"
+Sourcecode\main\setup_func.c(1750): warning:  #940-D: missing return statement at end of non-void function "SetMaxVolumeLevel"
+compiling setup_menu.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\setup_menu.c(144): warning:  #68-D: integer conversion resulted in a change of sign
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bMode" was set but never used
+Sourcecode\main\setup_menu.c(952): warning:  #550-D: parameter "bValue" was set but never used
+compiling task.c...
+compiling vfd_disp.c...
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(305): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1174): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1221): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1226): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1237): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1238): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1239): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1240): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\main\Zone1_task.c(1178): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1383): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1388): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(1415): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\Zone1_task.c(1419): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\Zone1_task.c(2048): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(2004): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2349): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2698): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2756): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+compiling zone2_task.c...
+Sourcecode\main\zone2_task.c(76): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\main\zone2_task.c(89): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(93): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(116): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\main\zone2_task.c(120): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+Sourcecode\main\zone2_task.c(162): warning:  #188-D: enumerated type mixed with another type
+compiling auto_sound.c...
+Sourcecode\main\..\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\main\auto_sound.c(352): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(522): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(710): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(914): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(1046): warning:  #174-D: expression has no effect
+Sourcecode\main\auto_sound.c(1165): warning:  #174-D: expression has no effect
+compiling radio_task.c...
+Sourcecode\main\radio_task.c(361): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(373): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(385): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(397): warning:  #111-D: statement is unreachable
+Sourcecode\main\radio_task.c(413): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(429): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(437): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+Sourcecode\main\radio_task.c(510): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(511): warning:  #167-D: argument of type "uint8 *" is incompatible with parameter of type "const char *"
+Sourcecode\main\radio_task.c(780): warning:  #192-D: unrecognized character escape sequence
+compiling uart.c...
+compiling cs8416.c...
+Sourcecode\driver\cs8416.c(48): warning:  #550-D: variable "IIC_Return" was set but never used
+compiling eeprom.c...
+Sourcecode\driver\eeprom.c(39): warning:  #550-D: variable "IIC_Return" was set but never used
+compiling i2cdrv.c...
+compiling IC4094.c...
+Sourcecode\driver\IC4094.c(242): warning:  #223-D: function "DelayMs" declared implicitly
+Sourcecode\driver\IC4094.c(274): warning:  #223-D: function "SetCurFocusTid" declared implicitly
+compiling Ioport.c...
+Sourcecode\driver\Ioport.c(1934): warning:  #223-D: function "SetTrigerOut1" declared implicitly
+Sourcecode\driver\Ioport.c(1935): warning:  #223-D: function "SetTrigerOut2" declared implicitly
+compiling ir.c...
+compiling vfddriver.c...
+Sourcecode\driver\vfddriver.c(44): warning:  #550-D: variable "IIC_Return" was set but never used
+Sourcecode\driver\vfddriver.c(57): warning:  #550-D: variable "IIC_Return" was set but never used
+Sourcecode\driver\vfddriver.c(82): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Sourcecode\driver\vfddriver.c(105): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+compiling mas9116.c...
+Sourcecode\driver\mas9116.c(179): warning:  #111-D: statement is unreachable
+compiling volume.c...
+Sourcecode\driver\volume.c(119): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(120): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(121): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(122): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(129): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+Sourcecode\driver\volume.c(159): warning:  #223-D: function "Set_FLFR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(160): warning:  #223-D: function "Set_SLSR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(161): warning:  #223-D: function "Set_CENLFE_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(162): warning:  #223-D: function "Set_SBLSBR_Mas9116_Mute" declared implicitly
+Sourcecode\driver\volume.c(181): warning:  #223-D: function "Mas9116ReadRC5" declared implicitly
+compiling max335.c...
+compiling channel.c...
+Sourcecode\driver\channel.c(77): warning:  #550-D: variable "result" was set but never used
+Sourcecode\driver\channel.c(424): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(426): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(429): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(458): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(460): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(463): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(673): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(674): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\driver\channel.c(682): warning:  #188-D: enumerated type mixed with another type
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\hdmi.c(119): warning:  #550-D: variable "result" was set but never used
+Sourcecode\driver\hdmi.c(454): warning:  #223-D: function "SetMax335Switch" declared implicitly
+Sourcecode\driver\hdmi.c(455): warning:  #223-D: function "UpdateMax335" declared implicitly
+Sourcecode\driver\hdmi.c(464): warning:  #40-D: expected an identifier
+compiling Dsp_Spi.c...
+compiling tuner_new.c...
+Sourcecode\driver\tuner_new.c(610): warning:  #223-D: function "SaveRadioStatus" declared implicitly
+Sourcecode\driver\tuner_new.c(823): warning:  #223-D: function "RBDS_Decode" declared implicitly
+Sourcecode\driver\tuner_new.c(972): warning:  #223-D: function "memcpy" declared implicitly
+Sourcecode\driver\tuner_new.c(1245): warning:  #550-D: variable "msglength" was set but never used
+compiling rbds.c...
+compiling AudioManager.c...
+compiling BassManager.c...
+Sourcecode\cs495300\BassManager.c(788): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\BassManager.c(790): warning:  #188-D: enumerated type mixed with another type
+compiling DelayManager.c...
+compiling Dsp_task.c...
+Sourcecode\cs495300\Dsp_task.c(152): warning:  #223-D: function "AnalyseTureHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(158): warning:  #223-D: function "AnalyseDtsHDCfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(164): warning:  #223-D: function "AnalyseDtsHRACfg" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(206): warning:  #223-D: function "MsgSetDspChannel" declared implicitly
+Sourcecode\cs495300\Dsp_task.c(188): warning:  #177-D: variable "old_cd_pcm" was declared but never referenced
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(10): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(638): warning:  #188-D: enumerated type mixed with another type
+Sourcecode\cs495300\dspdrv.c(1229): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1280): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1347): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1686): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1691): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(2276): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2319): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2315): warning:  #550-D: variable "ret" was set but never used
+Sourcecode\cs495300\dspdrv.c(2316): warning:  #177-D: variable "k" was declared but never referenced
+Sourcecode\cs495300\dspdrv.c(2455): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2456): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2457): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2489): warning:  #69-D: integer conversion resulted in truncation
+compiling DspInputOutputCfg.c...
+compiling Eq_Manager.c...
+compiling Irc1_Manager.c...
+compiling Irc2_Manager.c...
+compiling DSP_API.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+linking...
+Program Size: Code=133192 RO-data=7324 RW-data=12020 ZI-data=5036  
+FromELF: creating hex file...
+".\obj\C11_Audio12.axf" - 0 Error(s), 144 Warning(s).

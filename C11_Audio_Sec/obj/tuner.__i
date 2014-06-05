@@ -1,0 +1,1 @@
+ --thumb -c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\Sourcecode\driver -I "C:\Keil_4\ARM\INC" -I "C:\Keil_4\ARM\INC\Philips" -o ".\obj\tuner.o" --omf_browse ".\obj\tuner.crf" --depend ".\obj\tuner.d" "Sourcecode\driver\tuner.c"

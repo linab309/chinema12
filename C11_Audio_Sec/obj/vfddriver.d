@@ -1,0 +1,11 @@
+.\obj\vfddriver.o: Sourcecode\driver\vfddriver.c
+.\obj\vfddriver.o: Sourcecode\driver\..\main\macro.h
+.\obj\vfddriver.o: Sourcecode\driver\vfddriver.h
+.\obj\vfddriver.o: Sourcecode\driver\i2cdrv.h
+.\obj\vfddriver.o: Sourcecode\driver\ioport.h
+.\obj\vfddriver.o: Sourcecode\driver\mcudef.h
+.\obj\vfddriver.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\vfddriver.o: Sourcecode\driver\pin_config.h
+.\obj\vfddriver.o: Sourcecode\driver\..\main\task.h
+.\obj\vfddriver.o: Sourcecode\driver\..\main\debug.h
+.\obj\vfddriver.o: Sourcecode\driver\..\main\vfd_disp.h

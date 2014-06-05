@@ -1,0 +1,15 @@
+.\obj\channel.o: Sourcecode\driver\channel.c
+.\obj\channel.o: Sourcecode\driver\..\main\macro.h
+.\obj\channel.o: Sourcecode\driver\..\main\task.h
+.\obj\channel.o: Sourcecode\driver\..\main\debug.h
+.\obj\channel.o: Sourcecode\driver\..\main\vfd_disp.h
+.\obj\channel.o: Sourcecode\driver\channel.h
+.\obj\channel.o: Sourcecode\driver\max335.h
+.\obj\channel.o: Sourcecode\driver\cs8416.h
+.\obj\channel.o: Sourcecode\driver\ioport.h
+.\obj\channel.o: Sourcecode\driver\mcudef.h
+.\obj\channel.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\channel.o: Sourcecode\driver\pin_config.h
+.\obj\channel.o: Sourcecode\driver\i2cdrv.h
+.\obj\channel.o: Sourcecode\driver\eeprom.h
+.\obj\channel.o: Sourcecode\driver\..\cs495300\Dspdrv.h

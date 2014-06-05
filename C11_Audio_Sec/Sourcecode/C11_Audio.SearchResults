@@ -1,0 +1,52 @@
+---- mute Matches (52 in 15 files) ----
+AudioManager.c (cs495300): * @brief: DSP Audio Mute Control
+AudioManager.c (cs495300):			DSPFirmwareWrite(Audio_Manager_Wop,0x0001,0x00000001); /*mute*/
+Dspdrv.c (cs495300):			DacMute(1);  /*mute 掉导码时的噪声*/
+Dspdrv.c (cs495300):			DacMute(0);  /*mute 掉导码时的噪声*/
+Dspdrv.c (cs495300):			DacMute(1);  /*mute 掉导码时的噪声*/
+Dspdrv.c (cs495300):			DacMute(0);  /*mute 掉导码时的噪声*/
+Dspdrv.c (cs495300):			DacMute(1);  /*mute 掉导码时的噪声*/
+Dspdrv.c (cs495300):			DacMute(0);  /*mute 掉导码时的噪声*/
+Dspdrv.c (cs495300):			DacMute(1);  /*mute 掉导码时的噪声*/			
+Dspdrv.c (cs495300):			DacMute(0);  /*mute 掉导码时的噪声*/  
+DSP_API.c (cs495300):extern void Zone1Mute(uchar mute);
+IC4094.c (driver):void Set_Mas9116_HardMute(unsigned char mute)
+IC4094.c (driver):	if(mute)
+Ioport.c (driver):	IODIR1 |= MAS9116_CLK; /*OUTPUT*/ /*Mas9116 Mute Init in the InitMuteControl()*/
+Ioport.c (driver):/****************************Mute Control ***************************************/
+Ioport.c (driver):		SetZone2Mute(Mute);	/*Mute on*/
+Ioport.c (driver):		SetZone2Mute(UnMute);/*Mute off*/
+Ioport.c (driver):	Set7CH1Mute(Mute);
+Ioport.c (driver):	SetZone2Mute(Mute);
+Ioport.c (driver):	SetBalance_Mute(Mute);
+Ioport.c (driver):	SetHeadphoneMute(Mute);
+Ioport.c (driver):	Set7CH1Mute(Mute);
+Ioport.c (driver):	SetBalance_Mute(Mute);
+Ioport.c (driver):	SetHeadphoneMute(Mute);
+Ioport.c (driver):/****************************Mute Control ***************************************/
+Ioport.h (driver):#define Mute 			0
+Ioport.h (driver):/**************************************  Mute Control  ************************************/
+Ioport.h (driver):/**************************************  Mute Control  ************************************/
+Radio_task.c (main):					VfdTempDisp(VFD_LINE2_START_POSITION,VFD_UPDATE_NONE,30,"Mute");
+Rs232_protocol.c (main):/*Process zone1 command(Volume\mute\decode status\stereo effect)*/
+Rs232_protocol.c (main):/*Process zone1 mute command*/
+Rs232_protocol.c (main):	//	rs232_printf("Mute");
+Setup_func.c (main):			Set7CH1Mute(Mute);
+Tuner.c (driver):* @brief mute control command
+Tuner.c (driver):void Tuner_Mute_Command(unsigned char mute)
+Tuner.c (driver):	if(mute==1) //MUTE
+Tuner.h (driver):extern void Tuner_Mute_Command(unsigned char mute);
+Tuner_new.c (driver):	data_buffer[1] = mode;	//0x00 - mute
+Tuner_new.c (driver):* @brief mute control command
+Tuner_new.c (driver):void Tuner_Mute_Command(unsigned char mute)
+Tuner_new.c (driver):	if(mute == Tune_Unmute)
+Volume.c (driver): * @brief soft mute
+Zone1_task.c (main):BOOL MsgSetMute(TASK_ID t_id, unsigned char mode, unsigned char mute)
+Zone1_task.c (main):	buffer[2] = mute;
+Zone1_task.c (main):		VfdDisplay(VFD_LINE2_START_POSITION,VFD_UPDATE_LINE2,"Mute");
+Zone1_task.c (main):void Zone1Mute(uchar mute)
+Zone1_task.c (main):	if(mute)
+Zone1_task.c (main):		Set7CH1Mute(Mute);
+Zone1_task.c (main):		SetBalance_Mute(Mute);
+Zone1_task.c (main):		SetHeadphoneMute(Mute); /*耳机输出刚好相反*/
+Zone2_task.c (main):					VfdTempDisp(VFD_LINE2_START_POSITION,VFD_UPDATE_NONE,TEMP_DISPLAY_TIME,"Mute");

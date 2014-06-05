@@ -1,0 +1,10 @@
+.\obj\cs8416.o: Sourcecode\driver\cs8416.c
+.\obj\cs8416.o: Sourcecode\driver\..\main\macro.h
+.\obj\cs8416.o: Sourcecode\driver\..\main\task.h
+.\obj\cs8416.o: Sourcecode\driver\..\main\debug.h
+.\obj\cs8416.o: Sourcecode\driver\cs8416.h
+.\obj\cs8416.o: Sourcecode\driver\i2cdrv.h
+.\obj\cs8416.o: Sourcecode\driver\ioport.h
+.\obj\cs8416.o: Sourcecode\driver\mcudef.h
+.\obj\cs8416.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\cs8416.o: Sourcecode\driver\pin_config.h

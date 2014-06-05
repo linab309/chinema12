@@ -1,0 +1,1 @@
+ --thumb -c --device DARMP -g -O0 --apcs=interwork -I "C:\Keil\ARM\INC\Philips" -o ".\obj\eq_manager1.o" "Sourcecode\cs495300\Eq_Manager1.c"

@@ -1,0 +1,9 @@
+.\obj\ir.o: Sourcecode\driver\ir.c
+.\obj\ir.o: Sourcecode\driver\..\main\macro.h
+.\obj\ir.o: Sourcecode\driver\..\main\debug.h
+.\obj\ir.o: Sourcecode\driver\..\driver\ioport.h
+.\obj\ir.o: Sourcecode\driver\..\driver\mcudef.h
+.\obj\ir.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\ir.o: Sourcecode\driver\..\driver\pin_config.h
+.\obj\ir.o: Sourcecode\driver\ir.h
+.\obj\ir.o: c:\Keil\ARM\ARMCC\bin\..\include\string.h

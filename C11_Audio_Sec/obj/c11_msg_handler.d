@@ -1,0 +1,9 @@
+.\obj\c11_msg_handler.o: Sourcecode\main\c11_msg_handler.c
+.\obj\c11_msg_handler.o: Sourcecode\main\macro.h
+.\obj\c11_msg_handler.o: Sourcecode\main\debug.h
+.\obj\c11_msg_handler.o: Sourcecode\main\task.h
+.\obj\c11_msg_handler.o: Sourcecode\main\c11_msg_handler.h
+.\obj\c11_msg_handler.o: Sourcecode\main\queue.h
+.\obj\c11_msg_handler.o: Sourcecode\main\..\driver\timer.h
+.\obj\c11_msg_handler.o: Sourcecode\main\..\cs495300\Dspdrv.h
+.\obj\c11_msg_handler.o: c:\Keil\ARM\ARMCC\bin\..\include\string.h

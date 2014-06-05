@@ -1,0 +1,207 @@
+#include "macro.h"
+
+#include "keydefine.h"
+
+
+const KEYT zone1_remote_key_table[] = 
+{
+#if 0
+/*C6 remote*/
+	_NO_KEY,	/*0*/
+	_REMOTE_STEREO_KEY,	/*1*/
+	_REMOTE_ANALOG_KEY,	/*2*/
+	_REMOTE_DETECT_KEY,	/*3*/
+	_REMOTE_PLIIX_KEY,	/*4*/
+	_REMOTE_DIGI_2_KEY,	/*5*/
+	_REMOTE_CES7_1_KEY,	/*6*/
+	_REMOTE_DIGITAL_KEY,	/*7*/
+	_REMOTE_DECODE_KEY,	/*8*/
+	_REMOTE_NEO96_24_KEY,	/*9*/
+	_NO_KEY,	/*10*/
+	_NO_KEY,	/*11*/
+	_REMOTE_POWER_ON_KEY,	/*12*/
+	_REMOTE_SETUP_KEY,	/*13*/
+	_REMOTE_ZONE_KEY,	/*14*/
+	_REMOTE_DIRECT_KEY,	/*15*/
+	_REMOTE_VOLUME_UP_KEY,	/*16*/
+	_REMOTE_VOLUME_DOWN_KEY,	/*17*/
+	_NO_KEY,	/*18*/
+	_NO_KEY,	/*19*/
+	_REMOTE_AUDIO_KEY,	/*20*/
+	_REMOTE_7_1A_KEY,	/*21*/
+	_REMOTE_BRIGHT_KEY,	/*22*/
+	_REMOTE_TV_KEY,	/*23*/
+	_REMOTE_7_1B_KEY,	/*24*/
+	_REMOTE_LATE_KEY,	/*25*/
+	_NO_KEY,	/*26*/
+	_NO_KEY,	/*27*/
+	_REMOTE_DIGI_1_KEY,	/*28*/
+	_REMOTE_DIGI_4_KEY,	/*29*/
+	_REMOTE_DIGI_7_KEY,	/*30*/
+	_REMOTE_DIGI_3_KEY,	/*31*/
+	_REMOTE_SUR_MODE_KEY,	/*32*/
+	_REMOTE_INPUT_UP_KEY,	/*33*/
+	_REMOTE_ARROW_UP_KEY,	/*34*/
+	_REMOTE_ARROW_LEFT_KEY,	/*35*/
+	_REMOTE_ARROW_RIGHT_KEY,	/*36*/
+	_REMOTE_ARROW_DOWN_KEY,	/*37*/
+	_REMOTE_ENTER_KEY,	/*38*/
+	_NO_KEY,	/*39*/
+	_NO_KEY,	/*40*/
+	_NO_KEY,	/*41*/
+	_NO_KEY,	/*42*/
+	_NO_KEY,	/*43*/
+	_NO_KEY,	/*44*/
+	_NO_KEY,	/*45*/
+	_NO_KEY,	/*46*/
+	_NO_KEY,	/*47*/
+	_REMOTE_DIGI_6_KEY,	/*48*/
+	_REMOTE_VIDEO_KEY,	/*49*/
+	_REMOTE_TEST_KEY,	/*50*/
+	_REMOTE_DIGI_5_KEY,	/*51*/
+	_REMOTE_DIGI_8_KEY,	/*52*/
+	_REMOTE_DIGI_0_KEY,	/*53*/
+	_NO_KEY,	/*54*/
+	_NO_KEY,	/*55*/
+	_REMOTE_DIGI_9_KEY,	/*56*/
+	_REMOTE_MUTE_KEY,	/*57*/
+	_NO_KEY,	/*58*/
+	_NO_KEY,	/*59*/
+	_REMOTE_INPUT_DOWN_KEY,	/*60*/
+	_NO_KEY,	/*61*/
+	_REMOTE_EXIT_KEY,	/*62*/
+	_NO_KEY,	/*63*/
+#else
+/*C11 remote*/
+	_NO_KEY,					/*0x00*/
+	_REMOTE_HD_AM_KEY,			/*0x01*/
+	_REMOTE_HD_FM_KEY,			/*0x02*/
+	_REMOTE_SEEK_KEY,			/*0x03*/
+	_REMOTE_PLIIX_KEY,			/*0x04*/
+	_REMOTE_INPUT8_KEY,			/*0x05*/
+	_REMOTE_CES7_1_KEY,			/*0x06*/
+	_REMOTE_HDMI1_KEY,			/*0x07*/
+	_REMOTE_HDMI2_KEY,			/*0x08*/
+	_REMOTE_NEO96_24_KEY,		/*0x09*/
+	_NO_KEY,					/*0x0A*/
+	_REMOTE_POWER_OFF_KEY,		/*0x0B*/
+	_REMOTE_POWER_ON_KEY,		/*0x0C*/
+	_REMOTE_SETUP_KEY,			/*0x0D*/
+	_REMOTE_FM_KEY,				/*0x0E*/
+	_REMOTE_EQ_KEY,				/*0x0F*/
+	_REMOTE_VOLUME_UP_KEY,		/*0x10*/
+	_REMOTE_VOLUME_DOWN_KEY,	/*0x11*/
+	_REMOTE_TXT_DISPLAY_KEY,	/*0x12*/
+	_NO_KEY,					/*0x13*/
+	_REMOTE_AM_KEY,				/*0x14*/
+	_REMOTE_7CH1_IN_KEY,		/*0x15*/
+	_REMOTE_BRIGHT_KEY,			/*0x16*/
+	_NO_KEY,					/*0x17*/
+	_REMOTE_INPUT7_KEY,			/*0x18*/
+	_REMOTE_LATE_KEY,			/*0x19*/
+	_REMOTE_INPUT1_KEY,			/*0x1A*/
+	_REMOTE_INPUT2_KEY,			/*0x1B*/
+	_REMOTE_INPUT3_KEY,			/*0x1C*/
+	_REMOTE_INPUT4_KEY,			/*0x1D*/
+	_REMOTE_INPUT5_KEY,			/*0x1E*/
+	_REMOTE_INPUT6_KEY,			/*0x1F*/
+	_REMOTE_SUR_MODE_KEY,		/*0x20*/
+	_REMOTE_ARROW_DOWN_KEY,	/*0x21*/
+	_REMOTE_ENTER_KEY,			/*0x22*/
+	_REMOTE_ARROW_UP_KEY,		/*0x23*/
+	_REMOTE_DIGI_0_KEY,			/*0x24*/
+	_REMOTE_TEN_PLUS_KEY,		/*0x25*/
+	_REMOTE_FM_MODE_KEY,		/*0x26*/
+	_REMOTE_TUNER_SEEK_DOWN_KEY,	/*0x27*/
+	_NO_KEY,						/*0x28*/
+	_NO_KEY,						/*0x29*/
+	_REMOTE_ARROW_RIGHT_KEY,		/*0x2A*/
+	_NO_KEY,						/*0x2B*/
+	_REMOTE_DIGI_7_KEY,				/*0x2C*/
+	_REMOTE_DIGI_8_KEY,				/*0x2D*/
+	_REMOTE_DIGI_9_KEY,				/*0x2E*/
+	_REMOTE_TUNER_SEEK_UP_KEY,		/*0x2F*/
+	_NO_KEY,						/*0x30*/
+	_REMOTE_TEST_KEY,				/*0x31*/
+	_REMOTE_ARROW_LEFT_KEY,		/*0x32*/
+	_NO_KEY,						/*0x33*/
+	_REMOTE_DIGI_4_KEY,				/*0x34*/
+	_REMOTE_DIGI_5_KEY,				/*0x35*/
+	_REMOTE_DIGI_6_KEY,				/*0x36*/
+	_REMOTE_MEMORY_KEY,			/*0x37*/
+	_NO_KEY,						/*0x38*/
+	_REMOTE_MUTE_KEY,				/*0x39*/
+	_NO_KEY,						/*0x3A*/
+	_NO_KEY,						/*0x3B*/
+	_REMOTE_DIGI_1_KEY,				/*0x3C*/
+	_REMOTE_DIGI_2_KEY,				/*0x3D*/
+	_REMOTE_DIGI_3_KEY,				/*0x3E*/
+	_REMOTE_TUNER_SCAN_KEY,		/*0x3F*/
+
+
+#endif
+};
+
+const KEYT zone2_remote_key_table[] = 
+{
+	_REMOTE_Z2_POWER_OFF_KEY,	/*0x00*/
+	_NO_KEY,					/*0x01*/
+	_REMOTE_Z2_POWER_ON_KEY,	/*0x02*/
+	_REMOTE_Z2_HD_AM_KEY,		/*0x03*/
+	_REMOTE_Z2_HD_FM_KEY,		/*0x04*/
+	_REMOTE_Z2_HDMI1_KEY,		/*0x05*/
+	_REMOTE_Z2_HDMI2_KEY,		/*0x06*/
+	_NO_KEY,					/*0x07*/
+	_REMOTE_Z2_PRESET_DOWN_KEY,	/*0x08*/
+	_REMOTE_Z2_AM_KEY,				/*0x09*/
+	_REMOTE_Z2_PRESET_UP_KEY,		/*0x0A*/
+	_REMOTE_Z2_FM_KEY,				/*0x0B*/
+	_NO_KEY,						/*0x0C*/
+	_NO_KEY,						/*0x0D*/
+	_NO_KEY,						/*0x0E*/
+	_NO_KEY,						/*0x0F*/
+	_REMOTE_Z2_VOLUME_DOWN_KEY,	/*0x10*/
+	_NO_KEY,						/*0x11*/
+	_NO_KEY,						/*0x12*/
+	_REMOTE_Z2_VOLUME_UP_KEY,		/*0x13*/
+	_NO_KEY,				/*0x14*/
+	_NO_KEY,				/*0x15*/
+	_NO_KEY,				/*0x16*/
+	_NO_KEY,				/*0x17*/
+	_REMOTE_Z2_7CH1_IN_KEY,	/*0x18*/
+	_NO_KEY,				/*0x19*/
+	_NO_KEY,				/*0x1A*/
+	_REMOTE_Z2_MUTE_KEY,	/*0x1B*/
+	_NO_KEY,				/*0x1C*/
+	_NO_KEY,				/*0x1D*/
+	_NO_KEY,				/*0x1E*/
+	_NO_KEY,				/*0x1F*/
+	_REMOTE_Z2_INPUT1_KEY,	/*0x20*/
+	_REMOTE_Z2_INPUT2_KEY,	/*0x21*/
+	_REMOTE_Z2_INPUT3_KEY,	/*0x22*/
+	_REMOTE_Z2_INPUT4_KEY,	/*0x23*/
+	_REMOTE_LP_MEMORY1_KEY,        /*0X24*/
+	_REMOTE_LP_MEMORY2_KEY,        /*0X25*/
+	_REMOTE_RADIO_CHANNEL_ADD_KEY,        /*0X26*/
+	_REMOTE_RADIO_CHANNEL_RED_KEY,        /*0X27*/
+	_REMOTE_Z2_INPUT5_KEY,	/*0x28*/
+	_REMOTE_Z2_INPUT6_KEY,	/*0x29*/
+	_REMOTE_Z2_INPUT7_KEY,	/*0x2A*/
+	_REMOTE_Z2_INPUT8_KEY,	/*0x2B*/
+
+	_NO_KEY,	/*0x2C*/
+	_NO_KEY,	/*0x2D*/
+	_NO_KEY,	/*0x2E*/
+	_NO_KEY,	/*0x2F*/
+	_NO_KEY,	/*0x30*/
+	_NO_KEY,	/*0x31*/
+	_REMOTE_HDMI3_KEY,           /*0X32*/
+	_REMOTE_HDMI4_KEY,           /*0X33*/
+	_NO_KEY,	/*0x34*/
+	_NO_KEY,	/*0x35*/
+	_NO_KEY,	/*0x36*/
+	_NO_KEY,	/*0x37*/
+	_REMOTE_TVSOUND_KEY,         /*0X38*/
+
+};
+

@@ -1,0 +1,283 @@
+<html>
+<body>
+<pre>
+<h1>礦ision3 Build Log</h1>
+<h2>Project:</h2>
+E:\移交4\C11a_DSP497\代码\C11_Audio主板软件\C11A_09板300台\new_1.4hdmiborad\C11_Audio_Sec\C11_Audio.uv2
+Project File Date:  08/06/2010
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(293): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1096): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1122): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1123): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1100): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1873): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(1830): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2119): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2396): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2437): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+compiling timer.c...
+Sourcecode\driver\timer.c(117): warning:  #223-D: function "MsgSetSoftMute" declared implicitly
+Sourcecode\driver\timer.c(164): warning:  #223-D: function "lpcm_20_config" declared implicitly
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 16 Warning(s).
+Build target 'Target 1'
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling hdmi.c...
+Sourcecode\driver\..\cs495300\Dsp_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\driver\..\cs495300\Dsp_API.h(110): warning:  #375-D: declaration requires a typedef name
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling timer.c...
+Sourcecode\driver\timer.c(117): warning:  #223-D: function "MsgSetSoftMute" declared implicitly
+Sourcecode\driver\timer.c(164): warning:  #223-D: function "lpcm_20_config" declared implicitly
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(293): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1096): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1122): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1123): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1100): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1873): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(1830): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2119): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2396): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2442): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling Zone1_task.c...
+Sourcecode\main\..\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\..\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\main\Zone1_task.c(293): warning:  #177-D: variable "freq" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1096): warning:  #940-D: missing return statement at end of non-void function "GetVolumeEepromSetValue"
+Sourcecode\main\Zone1_task.c(1122): warning:  #223-D: function "LPC2132HwReset" declared implicitly
+Sourcecode\main\Zone1_task.c(1123): warning:  #223-D: function "IC4094_Default" declared implicitly
+Sourcecode\main\Zone1_task.c(1100): warning:  #177-D: variable "Debug_Value" was declared but never referenced
+Sourcecode\main\Zone1_task.c(1873): warning:  #223-D: function "DspReadTRUEHD" declared implicitly
+Sourcecode\main\Zone1_task.c(1830): warning:  #177-D: variable "Ture_HD_Channel" was declared but never referenced
+Sourcecode\main\Zone1_task.c(2119): warning:  #223-D: function "HDMI_Software_Update" declared implicitly
+Sourcecode\main\Zone1_task.c(2396): warning:  #117-D: non-void function "Zone1ProcMessage" should return a value
+Sourcecode\main\Zone1_task.c(2442): warning:  #223-D: function "DspChannelOutSetting" declared implicitly
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(8): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(1197): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1240): warning:  #117-D: non-void function "AC3_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1246): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1309): warning:  #117-D: non-void function "TureHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1313): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1647): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1652): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1925): warning:  #117-D: non-void function "ProcAutodetecResponse" should return a value
+Sourcecode\cs495300\dspdrv.c(1942): error:  #65: expected a ";"
+Sourcecode\cs495300\dspdrv.c(2235): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2278): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2413): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2414): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2415): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2446): warning:  #69-D: integer conversion resulted in truncation
+Target not created
+Build target 'Target 1'
+compiling dspdrv.c...
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+".\obj\C11_Audio_New.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(8): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(1197): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1240): warning:  #117-D: non-void function "AC3_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1246): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1309): warning:  #117-D: non-void function "TureHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1313): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1647): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1652): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1925): warning:  #117-D: non-void function "ProcAutodetecResponse" should return a value
+Sourcecode\cs495300\dspdrv.c(2235): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2278): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2413): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2414): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2415): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2446): warning:  #69-D: integer conversion resulted in truncation
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 17 Warning(s).
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(8): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(1197): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1240): warning:  #117-D: non-void function "AC3_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1246): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1309): warning:  #117-D: non-void function "TureHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1313): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1647): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1652): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1925): warning:  #117-D: non-void function "ProcAutodetecResponse" should return a value
+Sourcecode\cs495300\dspdrv.c(1943): error:  #65: expected a ";"
+Sourcecode\cs495300\dspdrv.c(2236): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2279): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2414): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2415): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2416): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2447): warning:  #69-D: integer conversion resulted in truncation
+Target not created
+Build target 'Target 1'
+compiling dspdrv.c...
+Sourcecode\cs495300\DSP_API.h(34): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\DSP_API.h(110): warning:  #375-D: declaration requires a typedef name
+Sourcecode\cs495300\Irc1_Manager.h(8): warning:  #1-D: last line of file ends without a newline
+Sourcecode\cs495300\dspdrv.c(1197): warning:  #223-D: function "DSP_TRUEHD_DRC_INIT" declared implicitly
+Sourcecode\cs495300\dspdrv.c(1240): warning:  #117-D: non-void function "AC3_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1246): warning:  #940-D: missing return statement at end of non-void function "AC3_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1309): warning:  #117-D: non-void function "TureHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1313): warning:  #940-D: missing return statement at end of non-void function "TureHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1647): warning:  #117-D: non-void function "DtsHD_Cfg_Change_Deal" should return a value
+Sourcecode\cs495300\dspdrv.c(1652): warning:  #940-D: missing return statement at end of non-void function "DtsHD_Cfg_Change_Deal"
+Sourcecode\cs495300\dspdrv.c(1925): warning:  #117-D: non-void function "ProcAutodetecResponse" should return a value
+Sourcecode\cs495300\dspdrv.c(2236): warning:  #940-D: missing return statement at end of non-void function "ProcAutodetecResponse"
+Sourcecode\cs495300\dspdrv.c(2279): warning:  #167-D: argument of type "signed long *" is incompatible with parameter of type "DWORD *"
+Sourcecode\cs495300\dspdrv.c(2414): warning:  #223-D: function "DSP_TRUEHD_DRC_Control" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2415): warning:  #223-D: function "DSP_TRUEHD_Cut_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2416): warning:  #223-D: function "DSP_TRUEHD_Boost_Scalefactor" declared implicitly
+Sourcecode\cs495300\dspdrv.c(2447): warning:  #69-D: integer conversion resulted in truncation
+linking...
+FromELF: creating hex file...
+User command #1: c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z
+========================================================================
+** Object/Image Component Sizes
+      Code  (inc. data)  RO Data    RW Data    ZI Data      Debug   File Name
+    125372       9300       7208      11552       4736     378364   (uncompressed)
+    125372       9300       7208       4556       4736     378364   obj\c11_audio.axf
+User command #2: find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map
+找不到文件 - D:\C11_AUDIO_SEC\LST\C11_AUDIO.MAP
+".\obj\C11_Audio_New.axf" - 0 Error(s), 17 Warning(s).

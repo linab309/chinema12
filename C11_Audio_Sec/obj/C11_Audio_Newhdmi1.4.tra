@@ -1,0 +1,76 @@
+*** Creating Trace Output File '.\obj\C11_Audio_Newhdmi1.4.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\lpc2300.o"'
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '".\obj\debug.o"'
+### List of Objects: adding '".\obj\queue.o"'
+### List of Objects: adding '".\obj\c11_msg_handler.o"'
+### List of Objects: adding '".\obj\key_tab.o"'
+### List of Objects: adding '".\obj\key_task.o"'
+### List of Objects: adding '".\obj\menu_tbl.o"'
+### List of Objects: adding '".\obj\message.o"'
+### List of Objects: adding '".\obj\rs232_protocol.o"'
+### List of Objects: adding '".\obj\setup_func.o"'
+### List of Objects: adding '".\obj\setup_menu.o"'
+### List of Objects: adding '".\obj\task.o"'
+### List of Objects: adding '".\obj\vfd_disp.o"'
+### List of Objects: adding '".\obj\zone1_task.o"'
+### List of Objects: adding '".\obj\zone2_task.o"'
+### List of Objects: adding '".\obj\auto_sound.o"'
+### List of Objects: adding '".\obj\radio_task.o"'
+### List of Objects: adding '".\obj\uart.o"'
+### List of Objects: adding '".\obj\cs8416.o"'
+### List of Objects: adding '".\obj\dac.o"'
+### List of Objects: adding '".\obj\eeprom.o"'
+### List of Objects: adding '".\obj\i2cdrv.o"'
+### List of Objects: adding '".\obj\ic165.o"'
+### List of Objects: adding '".\obj\ic4094.o"'
+### List of Objects: adding '".\obj\ioport.o"'
+### List of Objects: adding '".\obj\ir.o"'
+### List of Objects: adding '".\obj\timer.o"'
+### List of Objects: adding '".\obj\vfddriver.o"'
+### List of Objects: adding '".\obj\mas9116.o"'
+### List of Objects: adding '".\obj\volume.o"'
+### List of Objects: adding '".\obj\max335.o"'
+### List of Objects: adding '".\obj\channel.o"'
+### List of Objects: adding '".\obj\tuner.o"'
+### List of Objects: adding '".\obj\hdmi.o"'
+### List of Objects: adding '".\obj\dsp_spi.o"'
+### List of Objects: adding '".\obj\audiomanager.o"'
+### List of Objects: adding '".\obj\bassmanager.o"'
+### List of Objects: adding '".\obj\delaymanager.o"'
+### List of Objects: adding '".\obj\dolbymanager.o"'
+### List of Objects: adding '".\obj\dolbyprologicii.o"'
+### List of Objects: adding '".\obj\dolbyprologiciix.o"'
+### List of Objects: adding '".\obj\dsp_task.o"'
+### List of Objects: adding '".\obj\dspdrv.o"'
+### List of Objects: adding '".\obj\dspinputoutputcfg.o"'
+### List of Objects: adding '".\obj\eq_manager.o"'
+### List of Objects: adding '".\obj\irc1_manager.o"'
+### List of Objects: adding '".\obj\irc2_manager.o"'
+### List of Objects: adding '".\obj\os_manager.o"'
+### List of Objects: adding '".\obj\pcm_manager.o"'
+### List of Objects: adding '".\obj\signalgenerator.o"'
+### List of Objects: adding '".\obj\dts_es_manager.o"'
+### List of Objects: adding '".\obj\dts_manager.o"'
+### List of Objects: adding '".\obj\dts_neo6_manager.o"'
+### List of Objects: adding '".\obj\dolbyplusmanager.o"'
+### List of Objects: adding '".\obj\dolbytruehd.o"'
+### List of Objects: adding '".\obj\dsp_api.o"'
+### List of Objects: adding '".\obj\dolbyheadphone.o"'
+### ADS-LD Command completed:
+".\obj\lpc2300.o" ".\obj\main.o" ".\obj\debug.o" ".\obj\queue.o" ".\obj\c11_msg_handler.o" ".\obj\key_tab.o" ".\obj\key_task.o" ".\obj\menu_tbl.o" ".\obj\message.o" ".\obj\rs232_protocol.o" ".\obj\setup_func.o" ".\obj\setup_menu.o" ".\obj\task.o" ".\obj\vfd_disp.o" ".\obj\zone1_task.o" ".\obj\zone2_task.o" ".\obj\auto_sound.o" ".\obj\radio_task.o" ".\obj\uart.o" ".\obj\cs8416.o" ".\obj\dac.o" ".\obj\eeprom.o" ".\obj\i2cdrv.o" ".\obj\ic165.o" ".\obj\ic4094.o" ".\obj\ioport.o" ".\obj\ir.o" ".\obj\timer.o" ".\obj\vfddriver.o" ".\obj\mas9116.o" ".\obj\volume.o" ".\obj\max335.o" ".\obj\channel.o" ".\obj\tuner.o" ".\obj\hdmi.o" ".\obj\dsp_spi.o" ".\obj\audiomanager.o" ".\obj\bassmanager.o" ".\obj\delaymanager.o" ".\obj\dolbymanager.o" ".\obj\dolbyprologicii.o" ".\obj\dolbyprologiciix.o" ".\obj\dsp_task.o" ".\obj\dspdrv.o" ".\obj\dspinputoutputcfg.o" ".\obj\eq_manager.o" ".\obj\irc1_manager.o" ".\obj\irc2_manager.o" ".\obj\os_manager.o" ".\obj\pcm_manager.o" ".\obj\signalgenerator.o" ".\obj\dts_es_manager.o" ".\obj\dts_manager.o" ".\obj\dts_neo6_manager.o" ".\obj\dolbyplusmanager.o" ".\obj\dolbytruehd.o" ".\obj\dsp_api.o" ".\obj\dolbyheadphone.o" --strict --scatter ".\obj\C11_Audio_Newhdmi1.4.sct" 
+--map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\lst\C11_Audio_Newhdmi1.map" -o ".\obj\C11_Audio_Newhdmi1.4.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\obj\C11_Audio_Newhdmi1.4.axf'
+### ADS-LD Command File: '.\obj\C11_Audio_Newhdmi1.4.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\obj\C11_Audio_Newhdmi1.4.lnp', Handle=0x00000294
+### Writing '.lnp' file
+### ADS-LD Command file '.\obj\C11_Audio_Newhdmi1.4.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

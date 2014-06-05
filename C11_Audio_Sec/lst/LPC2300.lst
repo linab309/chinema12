@@ -1,0 +1,1578 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/******************************************************
+                       ***********************/
+    2 00000000         ;/* LPC2300.S: Startup file for Philips LPC2300 device s
+                       eries                 */
+    3 00000000         ;/******************************************************
+                       ***********************/
+    4 00000000         ;/* <<< Use Configuration Wizard in Context Menu >>>    
+                                             */
+    5 00000000         ;/******************************************************
+                       ***********************/
+    6 00000000         ;/* This file is part of the uVision/ARM development too
+                       ls.                   */
+    7 00000000         ;/* Copyright (c) 2006 Keil - An ARM Company. All rights
+                        reserved.            */
+    8 00000000         ;/* This software may only be used under the terms of a 
+                       valid, current,       */
+    9 00000000         ;/* end user licence from KEIL for a compatible version 
+                       of KEIL software      */
+   10 00000000         ;/* development tools. Nothing else gives you the right 
+                       to use this software. */
+   11 00000000         ;/******************************************************
+                       ***********************/
+   12 00000000         
+   13 00000000         
+   14 00000000         ;/*
+   15 00000000         ; *  The LPC2300.S code is executed after CPU Reset. Thi
+                       s file may be 
+   16 00000000         ; *  translated with the following SET symbols. In uVisi
+                       on these SET 
+   17 00000000         ; *  symbols are entered under Options - ASM - Define.
+   18 00000000         ; *
+   19 00000000         ; *  REMAP: when set the startup code initializes the re
+                       gister MEMMAP 
+   20 00000000         ; *  which overwrites the settings of the CPU configurat
+                       ion pins. The 
+   21 00000000         ; *  startup and interrupt vectors are remapped from:
+   22 00000000         ; *     0x00000000  default setting (not remapped)
+   23 00000000         ; *     0x40000000  when RAM_MODE is used
+   24 00000000         ; *
+   25 00000000         ; *  RAM_MODE: when set the device is configured for cod
+                       e execution
+   26 00000000         ; *  from on-chip RAM starting at address 0x40000000. 
+   27 00000000         ; */
+   28 00000000         
+   29 00000000         
+   30 00000000         ; Standard definitions of Mode bits and Interrupt (I & F
+                       ) flags in PSRs
+   31 00000000         
+   32 00000000 00000010 
+                       Mode_USR
+                               EQU              0x10
+   33 00000000 00000011 
+                       Mode_FIQ
+                               EQU              0x11
+   34 00000000 00000012 
+                       Mode_IRQ
+                               EQU              0x12
+   35 00000000 00000013 
+                       Mode_SVC
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                               EQU              0x13
+   36 00000000 00000017 
+                       Mode_ABT
+                               EQU              0x17
+   37 00000000 0000001B 
+                       Mode_UND
+                               EQU              0x1B
+   38 00000000 0000001F 
+                       Mode_SYS
+                               EQU              0x1F
+   39 00000000         
+   40 00000000 00000080 
+                       I_Bit   EQU              0x80        ; when I bit is set
+                                                            , IRQ is disabled
+   41 00000000 00000040 
+                       F_Bit   EQU              0x40        ; when F bit is set
+                                                            , FIQ is disabled
+   42 00000000         
+   43 00000000         
+   44 00000000         ;// <h> Stack Configuration (Stack Sizes in Bytes)
+   45 00000000         ;//   <o0> Undefined Mode      <0x0-0xFFFFFFFF:8>
+   46 00000000         ;//   <o1> Supervisor Mode     <0x0-0xFFFFFFFF:8>
+   47 00000000         ;//   <o2> Abort Mode          <0x0-0xFFFFFFFF:8>
+   48 00000000         ;//   <o3> Fast Interrupt Mode <0x0-0xFFFFFFFF:8>
+   49 00000000         ;//   <o4> Interrupt Mode      <0x0-0xFFFFFFFF:8>
+   50 00000000         ;//   <o5> User/System Mode    <0x0-0xFFFFFFFF:8>
+   51 00000000         ;// </h>
+   52 00000000         
+   53 00000000 00000000 
+                       UND_Stack_Size
+                               EQU              0x00000000
+   54 00000000 00000008 
+                       SVC_Stack_Size
+                               EQU              0x00000008
+   55 00000000 00000000 
+                       ABT_Stack_Size
+                               EQU              0x00000000
+   56 00000000 00000000 
+                       FIQ_Stack_Size
+                               EQU              0x00000000
+   57 00000000 00000100 
+                       IRQ_Stack_Size
+                               EQU              0x00000100
+   58 00000000 00000400 
+                       USR_Stack_Size
+                               EQU              0x00000400
+   59 00000000         
+   61 00000000 00000508 
+                       Stack_Size
+                               EQU              (UND_Stack_Size + SVC_Stack_Siz
+e + ABT_Stack_Size +                           FIQ_Stack_Size + IRQ_Stack_Size
+ + USR_Stack_Size)
+   62 00000000         
+   63 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
+=3
+   64 00000000         Stack_Mem
+                               SPACE            Stack_Size
+   65 00000508         
+   66 00000508 00000508 
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+                       Stack_Top
+                               EQU              Stack_Mem + Stack_Size
+   67 00000508         
+   68 00000508         
+   69 00000508         ;// <h> Heap Configuration
+   70 00000508         ;//   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF>
+   71 00000508         ;// </h>
+   72 00000508         
+   73 00000508 00000000 
+                       Heap_Size
+                               EQU              0x00000000
+   74 00000508         
+   75 00000508                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
+3
+   76 00000000         Heap_Mem
+                               SPACE            Heap_Size
+   77 00000000         
+   78 00000000         
+   79 00000000         ; System Control Block (SCB) Module Definitions
+   80 00000000 E01FC000 
+                       SCB_BASE
+                               EQU              0xE01FC000  ; SCB Base Address
+   81 00000000 00000080 
+                       PLLCON_OFS
+                               EQU              0x80        ; PLL Control Offse
+                                                            t
+   82 00000000 00000084 
+                       PLLCFG_OFS
+                               EQU              0x84        ; PLL Configuration
+                                                             Offset
+   83 00000000 00000088 
+                       PLLSTAT_OFS
+                               EQU              0x88        ; PLL Status Offset
+                                                            
+   84 00000000 0000008C 
+                       PLLFEED_OFS
+                               EQU              0x8C        ; PLL Feed Offset
+   85 00000000 00000104 
+                       CCLKCFG_OFS
+                               EQU              0x104       ; CPU Clock Divider
+                                                             Reg Offset
+   86 00000000 00000108 
+                       USBCLKCFG_OFS
+                               EQU              0x108       ; USB Clock Divider
+                                                             Reg Offset
+   87 00000000 0000010C 
+                       CLKSRCSEL_OFS
+                               EQU              0x10C       ; Clock Source Sel 
+                                                            Reg Offset
+   88 00000000 000001A0 
+                       SCS_OFS EQU              0x1A0       ; Sys Control and S
+                                                            tatus Reg Offset
+   89 00000000 000001A8 
+                       PCLKSEL0_OFS
+                               EQU              0x1A8       ; Periph Clock Sel 
+                                                            Reg 0 Offset
+   90 00000000 000001AC 
+                       PCLKSEL1_OFS
+                               EQU              0x1AC       ; Periph Clock Sel 
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+                                                            Reg 0 Offset
+   91 00000000         
+   92 00000000         ; Constants
+   93 00000000 00000010 
+                       OSCRANGE
+                               EQU              (1<<4)      ; Oscillator Range 
+                                                            Select
+   94 00000000 00000020 
+                       OSCEN   EQU              (1<<5)      ; Main oscillator E
+                                                            nable
+   95 00000000 00000040 
+                       OSCSTAT EQU              (1<<6)      ; Main Oscillator S
+                                                            tatus
+   96 00000000 00000001 
+                       PLLCON_PLLE
+                               EQU              (1<<0)      ; PLL Enable
+   97 00000000 00000002 
+                       PLLCON_PLLC
+                               EQU              (1<<1)      ; PLL Connect
+   98 00000000 00007FFF 
+                       PLLSTAT_M
+                               EQU              (0x7FFF<<0) ; PLL M Value
+   99 00000000 00FF0000 
+                       PLLSTAT_N
+                               EQU              (0xFF<<16)  ; PLL N Value
+  100 00000000 04000000 
+                       PLLSTAT_PLOCK
+                               EQU              (1<<26)     ; PLL Lock Status
+  101 00000000         
+  102 00000000         ;// <e> Clock Setup
+  103 00000000         ;//   <h> System Controls and Status Register (SYS)
+  104 00000000         ;//     <o1.4>    OSCRANGE: Main Oscillator Range Select
+                       
+  105 00000000         ;//                     <0=>  1 MHz to 20 MHz
+  106 00000000         ;//                     <1=> 15 MHz to 24 MHz
+  107 00000000         ;//     <e1.5>       OSCEN: Main Oscillator Enable
+  108 00000000         ;//     </e>
+  109 00000000         ;//   </h>
+  110 00000000         ;//
+  111 00000000         ;//   <h> PLL Clock Source Select Register (CLKSRCSEL)
+  112 00000000         ;//     <o2.0..1>   CLKSRC: PLL Clock Source Selection
+  113 00000000         ;//                     <0=> Internal RC oscillator
+  114 00000000         ;//                     <1=> Main oscillator
+  115 00000000         ;//                     <1=> RTC oscillator
+  116 00000000         ;//   </h>
+  117 00000000         ;//
+  118 00000000         ;//   <h> PLL Configuration Register (PLLCFG)
+  119 00000000         ;//                     <i> PLL_clk = (2* M * PLL_clk_sr
+                       c) / N
+  120 00000000         ;//     <o3.0..14>    MSEL: PLL Multiplier Selection
+  121 00000000         ;//                     <1-32768><#-1>
+  122 00000000         ;//                     <i> M Value
+  123 00000000         ;//     <o3.16..23>   NSEL: PLL Divider Selection
+  124 00000000         ;//                     <1-256><#-1>
+  125 00000000         ;//                     <i> N Value
+  126 00000000         ;//   </h>
+  127 00000000         ;//
+  128 00000000         ;//   <h> CPU Clock Configuration Register (CCLKCFG)
+  129 00000000         ;//     <o4.0..7>  CCLKSEL: Divide Value for CPU Clock f
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+                       rom PLL
+  130 00000000         ;//                     <1-256><#-1>
+  131 00000000         ;//   </h>
+  132 00000000         ;//
+  133 00000000         ;//   <h> USB Clock Configuration Register (USBCLKCFG)
+  134 00000000         ;//     <o5.0..3>   USBSEL: Divide Value for USB Clock f
+                       rom PLL
+  135 00000000         ;//                     <1-16><#-1>
+  136 00000000         ;//   </h>
+  137 00000000         ;//
+  138 00000000         ;//   <h> Peripheral Clock Selection Register 0 (PCLKSEL
+                       0)
+  139 00000000         ;//     <o6.0..1>      PCLK_WDT: Peripheral Clock Select
+                       ion for WDT
+  140 00000000         ;//                     <0=> Pclk = Cclk / 4
+  141 00000000         ;//                     <1=> Pclk = Cclk
+  142 00000000         ;//                     <2=> Pclk = Cclk / 2
+  143 00000000         ;//                     <3=> Pclk = Cclk / 8
+  144 00000000         ;//     <o6.2..3>   PCLK_TIMER0: Peripheral Clock Select
+                       ion for TIMER0
+  145 00000000         ;//                     <0=> Pclk = Cclk / 4
+  146 00000000         ;//                     <1=> Pclk = Cclk
+  147 00000000         ;//                     <2=> Pclk = Cclk / 2
+  148 00000000         ;//                     <3=> Pclk = Cclk / 8
+  149 00000000         ;//     <o6.4..5>   PCLK_TIMER1: Peripheral Clock Select
+                       ion for TIMER1
+  150 00000000         ;//                     <0=> Pclk = Cclk / 4
+  151 00000000         ;//                     <1=> Pclk = Cclk
+  152 00000000         ;//                     <2=> Pclk = Cclk / 2
+  153 00000000         ;//                     <3=> Pclk = Cclk / 8
+  154 00000000         ;//     <o6.6..7>    PCLK_UART0: Peripheral Clock Select
+                       ion for UART0
+  155 00000000         ;//                     <0=> Pclk = Cclk / 4
+  156 00000000         ;//                     <1=> Pclk = Cclk
+  157 00000000         ;//                     <2=> Pclk = Cclk / 2
+  158 00000000         ;//                     <3=> Pclk = Cclk / 8
+  159 00000000         ;//     <o6.8..9>    PCLK_UART1: Peripheral Clock Select
+                       ion for UART1
+  160 00000000         ;//                     <0=> Pclk = Cclk / 4
+  161 00000000         ;//                     <1=> Pclk = Cclk
+  162 00000000         ;//                     <2=> Pclk = Cclk / 2
+  163 00000000         ;//                     <3=> Pclk = Cclk / 8
+  164 00000000         ;//     <o6.10..11>   PCLK_PWM0: Peripheral Clock Select
+                       ion for PWM0
+  165 00000000         ;//                     <0=> Pclk = Cclk / 4
+  166 00000000         ;//                     <1=> Pclk = Cclk
+  167 00000000         ;//                     <2=> Pclk = Cclk / 2
+  168 00000000         ;//                     <3=> Pclk = Cclk / 8
+  169 00000000         ;//     <o6.12..13>   PCLK_PWM1: Peripheral Clock Select
+                       ion for PWM1
+  170 00000000         ;//                     <0=> Pclk = Cclk / 4
+  171 00000000         ;//                     <1=> Pclk = Cclk
+  172 00000000         ;//                     <2=> Pclk = Cclk / 2
+  173 00000000         ;//                     <3=> Pclk = Cclk / 8
+  174 00000000         ;//     <o6.14..15>   PCLK_I2C0: Peripheral Clock Select
+                       ion for I2C0
+  175 00000000         ;//                     <0=> Pclk = Cclk / 4
+  176 00000000         ;//                     <1=> Pclk = Cclk
+  177 00000000         ;//                     <2=> Pclk = Cclk / 2
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  178 00000000         ;//                     <3=> Pclk = Cclk / 8
+  179 00000000         ;//     <o6.16..17>    PCLK_SPI: Peripheral Clock Select
+                       ion for SPI
+  180 00000000         ;//                     <0=> Pclk = Cclk / 4
+  181 00000000         ;//                     <1=> Pclk = Cclk
+  182 00000000         ;//                     <2=> Pclk = Cclk / 2
+  183 00000000         ;//                     <3=> Pclk = Cclk / 8
+  184 00000000         ;//     <o6.18..19>    PCLK_RTC: Peripheral Clock Select
+                       ion for RTC
+  185 00000000         ;//                     <0=> Pclk = Cclk / 4
+  186 00000000         ;//                     <1=> Pclk = Cclk
+  187 00000000         ;//                     <2=> Pclk = Cclk / 2
+  188 00000000         ;//                     <3=> Pclk = Cclk / 8
+  189 00000000         ;//     <o6.20..21>   PCLK_SSP1: Peripheral Clock Select
+                       ion for SSP1
+  190 00000000         ;//                     <0=> Pclk = Cclk / 4
+  191 00000000         ;//                     <1=> Pclk = Cclk
+  192 00000000         ;//                     <2=> Pclk = Cclk / 2
+  193 00000000         ;//                     <3=> Pclk = Cclk / 8
+  194 00000000         ;//     <o6.22..23>    PCLK_DAC: Peripheral Clock Select
+                       ion for DAC
+  195 00000000         ;//                     <0=> Pclk = Cclk / 4
+  196 00000000         ;//                     <1=> Pclk = Cclk
+  197 00000000         ;//                     <2=> Pclk = Cclk / 2
+  198 00000000         ;//                     <3=> Pclk = Cclk / 8
+  199 00000000         ;//     <o6.24..25>    PCLK_ADC: Peripheral Clock Select
+                       ion for ADC
+  200 00000000         ;//                     <0=> Pclk = Cclk / 4
+  201 00000000         ;//                     <1=> Pclk = Cclk
+  202 00000000         ;//                     <2=> Pclk = Cclk / 2
+  203 00000000         ;//                     <3=> Pclk = Cclk / 8
+  204 00000000         ;//     <o6.26..27>   PCLK_CAN1: Peripheral Clock Select
+                       ion for CAN1
+  205 00000000         ;//                     <0=> Pclk = Cclk / 4
+  206 00000000         ;//                     <1=> Pclk = Cclk
+  207 00000000         ;//                     <2=> Pclk = Cclk / 2
+  208 00000000         ;//                     <3=> Pclk = Cclk / 6
+  209 00000000         ;//     <o6.28..29>   PCLK_CAN2: Peripheral Clock Select
+                       ion for CAN2
+  210 00000000         ;//                     <0=> Pclk = Cclk / 4
+  211 00000000         ;//                     <1=> Pclk = Cclk
+  212 00000000         ;//                     <2=> Pclk = Cclk / 2
+  213 00000000         ;//                     <3=> Pclk = Cclk / 6
+  214 00000000         ;//     <o6.30..31>    PCLK_ACF: Peripheral Clock Select
+                       ion for ACF
+  215 00000000         ;//                     <0=> Pclk = Cclk / 4
+  216 00000000         ;//                     <1=> Pclk = Cclk
+  217 00000000         ;//                     <2=> Pclk = Cclk / 2
+  218 00000000         ;//                     <3=> Pclk = Cclk / 6
+  219 00000000         ;//   </h>
+  220 00000000         ;//
+  221 00000000         ;//   <h> Peripheral Clock Selection Register 1 (PCLKSEL
+                       1)
+  222 00000000         ;//     <o7.0..1>  PCLK_BAT_RAM: Peripheral Clock Select
+                       ion for the Battery Supported RAM
+  223 00000000         ;//                     <0=> Pclk = Cclk / 4
+  224 00000000         ;//                     <1=> Pclk = Cclk
+  225 00000000         ;//                     <2=> Pclk = Cclk / 2
+  226 00000000         ;//                     <3=> Pclk = Cclk / 8
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+  227 00000000         ;//     <o7.2..3>     PCLK_GPIO: Peripheral Clock Select
+                       ion for GPIOs
+  228 00000000         ;//                     <0=> Pclk = Cclk / 4
+  229 00000000         ;//                     <1=> Pclk = Cclk
+  230 00000000         ;//                     <2=> Pclk = Cclk / 2
+  231 00000000         ;//                     <3=> Pclk = Cclk / 8
+  232 00000000         ;//     <o7.4..5>      PCLK_PCB: Peripheral Clock Select
+                       ion for Pin Connect Block
+  233 00000000         ;//                     <0=> Pclk = Cclk / 4
+  234 00000000         ;//                     <1=> Pclk = Cclk
+  235 00000000         ;//                     <2=> Pclk = Cclk / 2
+  236 00000000         ;//                     <3=> Pclk = Cclk / 8
+  237 00000000         ;//     <o7.6..7>     PCLK_I2C1: Peripheral Clock Select
+                       ion for I2C1
+  238 00000000         ;//                     <0=> Pclk = Cclk / 4
+  239 00000000         ;//                     <1=> Pclk = Cclk
+  240 00000000         ;//                     <2=> Pclk = Cclk / 2
+  241 00000000         ;//                     <3=> Pclk = Cclk / 8
+  242 00000000         ;//     <o7.10..11>   PCLK_SSP0: Peripheral Clock Select
+                       ion for SSP0
+  243 00000000         ;//                     <0=> Pclk = Cclk / 4
+  244 00000000         ;//                     <1=> Pclk = Cclk
+  245 00000000         ;//                     <2=> Pclk = Cclk / 2
+  246 00000000         ;//                     <3=> Pclk = Cclk / 8
+  247 00000000         ;//     <o7.12..13> PCLK_TIMER2: Peripheral Clock Select
+                       ion for TIMER2
+  248 00000000         ;//                     <0=> Pclk = Cclk / 4
+  249 00000000         ;//                     <1=> Pclk = Cclk
+  250 00000000         ;//                     <2=> Pclk = Cclk / 2
+  251 00000000         ;//                     <3=> Pclk = Cclk / 8
+  252 00000000         ;//     <o7.14..15> PCLK_TIMER3: Peripheral Clock Select
+                       ion for TIMER3
+  253 00000000         ;//                     <0=> Pclk = Cclk / 4
+  254 00000000         ;//                     <1=> Pclk = Cclk
+  255 00000000         ;//                     <2=> Pclk = Cclk / 2
+  256 00000000         ;//                     <3=> Pclk = Cclk / 8
+  257 00000000         ;//     <o7.16..17>  PCLK_UART2: Peripheral Clock Select
+                       ion for UART2
+  258 00000000         ;//                     <0=> Pclk = Cclk / 4
+  259 00000000         ;//                     <1=> Pclk = Cclk
+  260 00000000         ;//                     <2=> Pclk = Cclk / 2
+  261 00000000         ;//                     <3=> Pclk = Cclk / 8
+  262 00000000         ;//     <o7.18..19>  PCLK_UART3: Peripheral Clock Select
+                       ion for UART3
+  263 00000000         ;//                     <0=> Pclk = Cclk / 4
+  264 00000000         ;//                     <1=> Pclk = Cclk
+  265 00000000         ;//                     <2=> Pclk = Cclk / 2
+  266 00000000         ;//                     <3=> Pclk = Cclk / 8
+  267 00000000         ;//     <o7.20..21>   PCLK_I2C2: Peripheral Clock Select
+                       ion for I2C2
+  268 00000000         ;//                     <0=> Pclk = Cclk / 4
+  269 00000000         ;//                     <1=> Pclk = Cclk
+  270 00000000         ;//                     <2=> Pclk = Cclk / 2
+  271 00000000         ;//                     <3=> Pclk = Cclk / 8
+  272 00000000         ;//     <o7.22..23>    PCLK_I2S: Peripheral Clock Select
+                       ion for I2S
+  273 00000000         ;//                     <0=> Pclk = Cclk / 4
+  274 00000000         ;//                     <1=> Pclk = Cclk
+  275 00000000         ;//                     <2=> Pclk = Cclk / 2
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  276 00000000         ;//                     <3=> Pclk = Cclk / 8
+  277 00000000         ;//     <o7.24..25>    PCLK_MCI: Peripheral Clock Select
+                       ion for MCI
+  278 00000000         ;//                     <0=> Pclk = Cclk / 4
+  279 00000000         ;//                     <1=> Pclk = Cclk
+  280 00000000         ;//                     <2=> Pclk = Cclk / 2
+  281 00000000         ;//                     <3=> Pclk = Cclk / 8
+  282 00000000         ;//     <o7.28..29> PCLK_SYSCON: Peripheral Clock Select
+                       ion for System Control Block
+  283 00000000         ;//                     <0=> Pclk = Cclk / 4
+  284 00000000         ;//                     <1=> Pclk = Cclk
+  285 00000000         ;//                     <2=> Pclk = Cclk / 2
+  286 00000000         ;//                     <3=> Pclk = Cclk / 8
+  287 00000000         ;//   </h>
+  288 00000000         ;// </e>
+  289 00000000 00000001 
+                       CLOCK_SETUP
+                               EQU              1
+  290 00000000 00000020 
+                       SCS_Val EQU              0x00000020
+  291 00000000 00000001 
+                       CLKSRCSEL_Val
+                               EQU              0x00000001
+  292 00000000 0000000C 
+                       PLLCFG_Val
+                               EQU              0x0000000C
+  293 00000000 00000005 
+                       CCLKCFG_Val
+                               EQU              0x00000005
+  294 00000000 00000005 
+                       USBCLKCFG_Val
+                               EQU              0x00000005
+  295 00000000 00000000 
+                       PCLKSEL0_Val
+                               EQU              0x00000000
+  296 00000000 00000000 
+                       PCLKSEL1_Val
+                               EQU              0x00000000
+  297 00000000         
+  298 00000000         
+  299 00000000         ; Memory Accelerator Module (MAM) definitions
+  300 00000000 E01FC000 
+                       MAM_BASE
+                               EQU              0xE01FC000  ; MAM Base Address
+  301 00000000 00000000 
+                       MAMCR_OFS
+                               EQU              0x00        ; MAM Control Offse
+                                                            t
+  302 00000000 00000004 
+                       MAMTIM_OFS
+                               EQU              0x04        ; MAM Timing Offset
+                                                            
+  303 00000000         
+  304 00000000         ;// <e> MAM Setup
+  305 00000000         ;//   <o1.0..1>   MAM Control
+  306 00000000         ;//               <0=> Disabled
+  307 00000000         ;//               <1=> Partially Enabled
+  308 00000000         ;//               <2=> Fully Enabled
+  309 00000000         ;//               <i> Mode
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+  310 00000000         ;//   <o2.0..2>   MAM Timing
+  311 00000000         ;//               <0=> Reserved  <1=> 1   <2=> 2   <3=> 
+                       3
+  312 00000000         ;//               <4=> 4         <5=> 5   <6=> 6   <7=> 
+                       7
+  313 00000000         ;//               <i> Fetch Cycles
+  314 00000000         ;// </e>
+  315 00000000 00000001 
+                       MAM_SETUP
+                               EQU              1
+  316 00000000 00000002 
+                       MAMCR_Val
+                               EQU              0x00000002
+  317 00000000 00000004 
+                       MAMTIM_Val
+                               EQU              0x00000004
+  318 00000000         
+  319 00000000         
+  320 00000000         ; Area Definition and Entry Point
+  321 00000000         ;  Startup Code must be linked first at Address at which
+                        it expects to run.
+  322 00000000         
+  323 00000000                 AREA             RESET, CODE, READONLY
+  324 00000000                 ARM
+  325 00000000         
+  326 00000000         
+  327 00000000         ; Exception Vectors
+  328 00000000         ;  Mapped to Address 0.
+  329 00000000         ;  Absolute addressing mode must be used.
+  330 00000000         ;  Dummy Handlers are implemented as infinite loops whic
+                       h can be modified.
+  331 00000000         
+  332 00000000 E59FF018 
+                       Vectors LDR              PC, Reset_Addr
+  333 00000004 E59FF018        LDR              PC, Undef_Addr
+  334 00000008 E59FF018        LDR              PC, SWI_Addr
+  335 0000000C E59FF018        LDR              PC, PAbt_Addr
+  336 00000010 E59FF018        LDR              PC, DAbt_Addr
+  337 00000014 E1A00000        NOP                          ; Reserved Vector 
+  338 00000018         ;               LDR     PC, IRQ_Addr
+  339 00000018 E51FF120        LDR              PC, [PC, #-0x0120] ; Vector fro
+                                                            m VicVectAddr
+  340 0000001C E59FF018        LDR              PC, FIQ_Addr
+  341 00000020         
+  342 00000020 00000000 
+                       Reset_Addr
+                               DCD              Reset_Handler
+  343 00000024 00000000 
+                       Undef_Addr
+                               DCD              Undef_Handler
+  344 00000028 00000000 
+                       SWI_Addr
+                               DCD              SWI_Handler
+  345 0000002C 00000000 
+                       PAbt_Addr
+                               DCD              PAbt_Handler
+  346 00000030 00000000 
+                       DAbt_Addr
+                               DCD              DAbt_Handler
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+  347 00000034 00000000        DCD              0           ; Reserved Address 
+                                                            
+  348 00000038 00000000 
+                       IRQ_Addr
+                               DCD              IRQ_Handler
+  349 0000003C 00000000 
+                       FIQ_Addr
+                               DCD              FIQ_Handler
+  350 00000040         
+  351 00000040 EAFFFFFE 
+                       Undef_Handler
+                               B                Undef_Handler
+  352 00000044 EAFFFFFE 
+                       SWI_Handler
+                               B                SWI_Handler
+  353 00000048 EAFFFFFE 
+                       PAbt_Handler
+                               B                PAbt_Handler
+  354 0000004C EAFFFFFE 
+                       DAbt_Handler
+                               B                DAbt_Handler
+  355 00000050 EAFFFFFE 
+                       IRQ_Handler
+                               B                IRQ_Handler
+  356 00000054 EAFFFFFE 
+                       FIQ_Handler
+                               B                FIQ_Handler
+  357 00000058         
+  358 00000058         
+  359 00000058         ; Reset Handler
+  360 00000058         
+  361 00000058                 EXPORT           Reset_Handler
+  362 00000058         Reset_Handler
+  363 00000058         
+  364 00000058         
+  365 00000058         ; Setup Clock
+  366 00000058                 IF               CLOCK_SETUP != 0
+  367 00000058 E59F00FC        LDR              R0, =SCB_BASE
+  368 0000005C E3A010AA        MOV              R1, #0xAA
+  369 00000060 E3A02055        MOV              R2, #0x55
+  370 00000064         
+  371 00000064         ;  Configure and Enable PLL
+  372 00000064 E3A03020        LDR              R3, =SCS_Val ; Enable main osci
+                                                            llator
+  373 00000068 E58031A0        STR              R3, [R0, #SCS_OFS]
+  374 0000006C         
+  375 0000006C                 IF               (SCS_Val:AND:OSCEN) != 0
+  376 0000006C E59031A0 
+                       OSC_Loop
+                               LDR              R3, [R0, #SCS_OFS] ; Wait for m
+                                                            ain osc stabilize
+  377 00000070 E2133040        ANDS             R3, R3, #OSCSTAT
+  378 00000074 0AFFFFFC        BEQ              OSC_Loop
+  379 00000078                 ENDIF
+  380 00000078         
+  381 00000078 E3A03001        LDR              R3, =CLKSRCSEL_Val ; Select PLL
+                                                             source clock
+  382 0000007C E580310C        STR              R3, [R0, #CLKSRCSEL_OFS]
+  383 00000080 E3A0300C        LDR              R3, =PLLCFG_Val
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+  384 00000084 E5803084        STR              R3, [R0, #PLLCFG_OFS]
+  385 00000088 E580108C        STR              R1, [R0, #PLLFEED_OFS]
+  386 0000008C E580208C        STR              R2, [R0, #PLLFEED_OFS]
+  387 00000090 E3A03001        MOV              R3, #PLLCON_PLLE
+  388 00000094 E5803080        STR              R3, [R0, #PLLCON_OFS]
+  389 00000098 E580108C        STR              R1, [R0, #PLLFEED_OFS]
+  390 0000009C E580208C        STR              R2, [R0, #PLLFEED_OFS]
+  391 000000A0         
+  392 000000A0         ;  Wait until PLL Locked
+  393 000000A0 E5903088 
+                       PLL_Loop
+                               LDR              R3, [R0, #PLLSTAT_OFS]
+  394 000000A4 E2133301        ANDS             R3, R3, #PLLSTAT_PLOCK
+  395 000000A8 0AFFFFFC        BEQ              PLL_Loop
+  396 000000AC         
+  397 000000AC E5903088 
+                       M_N_Lock
+                               LDR              R3, [R0, #PLLSTAT_OFS]
+  398 000000B0 E59F40A8        LDR              R4, =(PLLSTAT_M:OR:PLLSTAT_N)
+  399 000000B4 E0033004        AND              R3, R3, R4
+  400 000000B8 E3A0400C        LDR              R4, =PLLCFG_Val
+  401 000000BC E0333004        EORS             R3, R3, R4
+  402 000000C0 1AFFFFF9        BNE              M_N_Lock
+  403 000000C4         
+  404 000000C4         ;  Setup CPU clock divider
+  405 000000C4 E3A03005        MOV              R3, #CCLKCFG_Val
+  406 000000C8 E5803104        STR              R3, [R0, #CCLKCFG_OFS]
+  407 000000CC         
+  408 000000CC         ;  Setup USB clock divider
+  409 000000CC E3A03005        LDR              R3, =USBCLKCFG_Val
+  410 000000D0 E5803108        STR              R3, [R0, #USBCLKCFG_OFS]
+  411 000000D4         
+  412 000000D4         ;  Setup Peripheral Clock
+  413 000000D4 E3A03000        LDR              R3, =PCLKSEL0_Val
+  414 000000D8 E58031A8        STR              R3, [R0, #PCLKSEL0_OFS]
+  415 000000DC E3A03000        LDR              R3, =PCLKSEL1_Val
+  416 000000E0 E58031AC        STR              R3, [R0, #PCLKSEL1_OFS]
+  417 000000E4         
+  418 000000E4         ;  Switch to PLL Clock
+  419 000000E4 E3A03003        MOV              R3, #(PLLCON_PLLE:OR:PLLCON_PLL
+C)
+  420 000000E8 E5803080        STR              R3, [R0, #PLLCON_OFS]
+  421 000000EC E580108C        STR              R1, [R0, #PLLFEED_OFS]
+  422 000000F0 E580208C        STR              R2, [R0, #PLLFEED_OFS]
+  423 000000F4                 ENDIF                        ; CLOCK_SETUP
+  424 000000F4         
+  425 000000F4         
+  426 000000F4         ; Setup MAM
+  427 000000F4                 IF               MAM_SETUP != 0
+  428 000000F4 E59F0060        LDR              R0, =MAM_BASE
+  429 000000F8 E3A01004        MOV              R1, #MAMTIM_Val
+  430 000000FC E5801004        STR              R1, [R0, #MAMTIM_OFS]
+  431 00000100 E3A01002        MOV              R1, #MAMCR_Val
+  432 00000104 E5801000        STR              R1, [R0, #MAMCR_OFS]
+  433 00000108                 ENDIF                        ; MAM_SETUP
+  434 00000108         
+  435 00000108         
+  436 00000108         ; Memory Mapping (when Interrupt Vectors are in RAM)
+  437 00000108 E01FC040 
+
+
+
+ARM Macro Assembler    Page 12 
+
+
+                       MEMMAP  EQU              0xE01FC040  ; Memory Mapping Co
+                                                            ntrol
+  438 00000108                 IF               :DEF:REMAP
+  446                          ENDIF
+  447 00000108         
+  448 00000108         
+  449 00000108         ; Initialise Interrupt System
+  450 00000108         ;  ...
+  451 00000108         
+  452 00000108         
+  453 00000108         ; Setup Stack for each mode
+  454 00000108         
+  455 00000108 E59F0054        LDR              R0, =Stack_Top
+  456 0000010C         
+  457 0000010C         ;  Enter Undefined Instruction Mode and set its Stack Po
+                       inter
+  458 0000010C E321F0DB        MSR              CPSR_c, #Mode_UND:OR:I_Bit:OR:F
+_Bit
+  459 00000110 E1A0D000        MOV              SP, R0
+  460 00000114 E2400000        SUB              R0, R0, #UND_Stack_Size
+  461 00000118         
+  462 00000118         ;  Enter Abort Mode and set its Stack Pointer
+  463 00000118 E321F0D7        MSR              CPSR_c, #Mode_ABT:OR:I_Bit:OR:F
+_Bit
+  464 0000011C E1A0D000        MOV              SP, R0
+  465 00000120 E2400000        SUB              R0, R0, #ABT_Stack_Size
+  466 00000124         
+  467 00000124         ;  Enter FIQ Mode and set its Stack Pointer
+  468 00000124 E321F0D1        MSR              CPSR_c, #Mode_FIQ:OR:I_Bit:OR:F
+_Bit
+  469 00000128 E1A0D000        MOV              SP, R0
+  470 0000012C E2400000        SUB              R0, R0, #FIQ_Stack_Size
+  471 00000130         
+  472 00000130         ;  Enter IRQ Mode and set its Stack Pointer
+  473 00000130 E321F0D2        MSR              CPSR_c, #Mode_IRQ:OR:I_Bit:OR:F
+_Bit
+  474 00000134 E1A0D000        MOV              SP, R0
+  475 00000138 E2400C01        SUB              R0, R0, #IRQ_Stack_Size
+  476 0000013C         
+  477 0000013C         ;  Enter Supervisor Mode and set its Stack Pointer
+  478 0000013C E321F0D3        MSR              CPSR_c, #Mode_SVC:OR:I_Bit:OR:F
+_Bit
+  479 00000140 E1A0D000        MOV              SP, R0
+  480 00000144 E2400008        SUB              R0, R0, #SVC_Stack_Size
+  481 00000148         
+  482 00000148         ;  Enter User Mode and set its Stack Pointer
+  483 00000148 E321F010        MSR              CPSR_c, #Mode_USR
+  484 0000014C E1A0D000        MOV              SP, R0
+  485 00000150 E24DAB01        SUB              SL, SP, #USR_Stack_Size
+  486 00000154         
+  487 00000154         
+  488 00000154         ; Enter the C code
+  489 00000154         
+  490 00000154                 IMPORT           __main
+  491 00000154 E59F000C        LDR              R0, =__main
+  492 00000158 E12FFF10        BX               R0
+  493 0000015C         
+  494 0000015C         
+  495 0000015C         ; User Initial Stack & Heap
+
+
+
+ARM Macro Assembler    Page 13 
+
+
+  496 0000015C E01FC000 
+              00FF7FFF 
+              00000000 
+              00000000         AREA             |.text|, CODE, READONLY
+  497 00000000         
+  498 00000000                 IMPORT           __use_two_region_memory
+  499 00000000                 EXPORT           __user_initial_stackheap
+  500 00000000         __user_initial_stackheap
+  501 00000000         
+  502 00000000 E59F000C        LDR              R0, =  Heap_Mem
+  503 00000004 E59F100C        LDR              R1, =(Stack_Mem + USR_Stack_Siz
+e)
+  504 00000008 E59F2004        LDR              R2, = (Heap_Mem +      Heap_Siz
+e)
+  505 0000000C E59F3008        LDR              R3, = Stack_Mem
+  506 00000010 E12FFF1E        BX               LR
+  507 00000014         
+  508 00000014         
+  509 00000014                 END
+              00000000 
+              00000400 
+              00000000 
+Command Line: --debug --xref --apcs=interwork --depend=.\obj\LPC2300.d -o.\obj\
+LPC2300.o -Ic:\Keil\ARM\RV31\INC -Ic:\Keil\ARM\CMSIS\Include -Ic:\Keil\ARM\Inc\
+Philips --list=.\lst\LPC2300.lst Sourcecode\startup\LPC2300.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 63 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 64 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 66 in file Sourcecode\startup\LPC2300.s
+      At line 503 in file Sourcecode\startup\LPC2300.s
+      At line 505 in file Sourcecode\startup\LPC2300.s
+
+Stack_Top 00000508
+
+Symbol: Stack_Top
+   Definitions
+      At line 66 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 455 in file Sourcecode\startup\LPC2300.s
+Comment: Stack_Top used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HEAP 00000000
+
+Symbol: HEAP
+   Definitions
+      At line 75 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: HEAP unused
+Heap_Mem 00000000
+
+Symbol: Heap_Mem
+   Definitions
+      At line 76 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 502 in file Sourcecode\startup\LPC2300.s
+      At line 504 in file Sourcecode\startup\LPC2300.s
+
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DAbt_Addr 00000030
+
+Symbol: DAbt_Addr
+   Definitions
+      At line 346 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 336 in file Sourcecode\startup\LPC2300.s
+Comment: DAbt_Addr used once
+DAbt_Handler 0000004C
+
+Symbol: DAbt_Handler
+   Definitions
+      At line 354 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 346 in file Sourcecode\startup\LPC2300.s
+      At line 354 in file Sourcecode\startup\LPC2300.s
+
+FIQ_Addr 0000003C
+
+Symbol: FIQ_Addr
+   Definitions
+      At line 349 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 340 in file Sourcecode\startup\LPC2300.s
+Comment: FIQ_Addr used once
+FIQ_Handler 00000054
+
+Symbol: FIQ_Handler
+   Definitions
+      At line 356 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 349 in file Sourcecode\startup\LPC2300.s
+      At line 356 in file Sourcecode\startup\LPC2300.s
+
+IRQ_Addr 00000038
+
+Symbol: IRQ_Addr
+   Definitions
+      At line 348 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: IRQ_Addr unused
+IRQ_Handler 00000050
+
+Symbol: IRQ_Handler
+   Definitions
+      At line 355 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 348 in file Sourcecode\startup\LPC2300.s
+      At line 355 in file Sourcecode\startup\LPC2300.s
+
+M_N_Lock 000000AC
+
+Symbol: M_N_Lock
+   Definitions
+      At line 397 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 402 in file Sourcecode\startup\LPC2300.s
+Comment: M_N_Lock used once
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+OSC_Loop 0000006C
+
+Symbol: OSC_Loop
+   Definitions
+      At line 376 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 378 in file Sourcecode\startup\LPC2300.s
+Comment: OSC_Loop used once
+PAbt_Addr 0000002C
+
+Symbol: PAbt_Addr
+   Definitions
+      At line 345 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 335 in file Sourcecode\startup\LPC2300.s
+Comment: PAbt_Addr used once
+PAbt_Handler 00000048
+
+Symbol: PAbt_Handler
+   Definitions
+      At line 353 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 345 in file Sourcecode\startup\LPC2300.s
+      At line 353 in file Sourcecode\startup\LPC2300.s
+
+PLL_Loop 000000A0
+
+Symbol: PLL_Loop
+   Definitions
+      At line 393 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 395 in file Sourcecode\startup\LPC2300.s
+Comment: PLL_Loop used once
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 323 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: RESET unused
+Reset_Addr 00000020
+
+Symbol: Reset_Addr
+   Definitions
+      At line 342 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 332 in file Sourcecode\startup\LPC2300.s
+Comment: Reset_Addr used once
+Reset_Handler 00000058
+
+Symbol: Reset_Handler
+   Definitions
+      At line 362 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 342 in file Sourcecode\startup\LPC2300.s
+      At line 361 in file Sourcecode\startup\LPC2300.s
+
+SWI_Addr 00000028
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: SWI_Addr
+   Definitions
+      At line 344 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 334 in file Sourcecode\startup\LPC2300.s
+Comment: SWI_Addr used once
+SWI_Handler 00000044
+
+Symbol: SWI_Handler
+   Definitions
+      At line 352 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 344 in file Sourcecode\startup\LPC2300.s
+      At line 352 in file Sourcecode\startup\LPC2300.s
+
+Undef_Addr 00000024
+
+Symbol: Undef_Addr
+   Definitions
+      At line 343 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 333 in file Sourcecode\startup\LPC2300.s
+Comment: Undef_Addr used once
+Undef_Handler 00000040
+
+Symbol: Undef_Handler
+   Definitions
+      At line 351 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 343 in file Sourcecode\startup\LPC2300.s
+      At line 351 in file Sourcecode\startup\LPC2300.s
+
+Vectors 00000000
+
+Symbol: Vectors
+   Definitions
+      At line 332 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: Vectors unused
+19 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 496 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: .text unused
+__user_initial_stackheap 00000000
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 500 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 499 in file Sourcecode\startup\LPC2300.s
+Comment: __user_initial_stackheap used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+ABT_Stack_Size 00000000
+
+Symbol: ABT_Stack_Size
+   Definitions
+      At line 55 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 61 in file Sourcecode\startup\LPC2300.s
+      At line 465 in file Sourcecode\startup\LPC2300.s
+
+CCLKCFG_OFS 00000104
+
+Symbol: CCLKCFG_OFS
+   Definitions
+      At line 85 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 406 in file Sourcecode\startup\LPC2300.s
+Comment: CCLKCFG_OFS used once
+CCLKCFG_Val 00000005
+
+Symbol: CCLKCFG_Val
+   Definitions
+      At line 293 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 405 in file Sourcecode\startup\LPC2300.s
+Comment: CCLKCFG_Val used once
+CLKSRCSEL_OFS 0000010C
+
+Symbol: CLKSRCSEL_OFS
+   Definitions
+      At line 87 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 382 in file Sourcecode\startup\LPC2300.s
+Comment: CLKSRCSEL_OFS used once
+CLKSRCSEL_Val 00000001
+
+Symbol: CLKSRCSEL_Val
+   Definitions
+      At line 291 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 381 in file Sourcecode\startup\LPC2300.s
+Comment: CLKSRCSEL_Val used once
+CLOCK_SETUP 00000001
+
+Symbol: CLOCK_SETUP
+   Definitions
+      At line 289 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 366 in file Sourcecode\startup\LPC2300.s
+Comment: CLOCK_SETUP used once
+FIQ_Stack_Size 00000000
+
+Symbol: FIQ_Stack_Size
+   Definitions
+      At line 56 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 61 in file Sourcecode\startup\LPC2300.s
+      At line 470 in file Sourcecode\startup\LPC2300.s
+
+F_Bit 00000040
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Absolute symbols
+
+
+Symbol: F_Bit
+   Definitions
+      At line 41 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 458 in file Sourcecode\startup\LPC2300.s
+      At line 463 in file Sourcecode\startup\LPC2300.s
+      At line 468 in file Sourcecode\startup\LPC2300.s
+      At line 473 in file Sourcecode\startup\LPC2300.s
+      At line 478 in file Sourcecode\startup\LPC2300.s
+
+Heap_Size 00000000
+
+Symbol: Heap_Size
+   Definitions
+      At line 73 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 76 in file Sourcecode\startup\LPC2300.s
+      At line 504 in file Sourcecode\startup\LPC2300.s
+
+IRQ_Stack_Size 00000100
+
+Symbol: IRQ_Stack_Size
+   Definitions
+      At line 57 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 61 in file Sourcecode\startup\LPC2300.s
+      At line 475 in file Sourcecode\startup\LPC2300.s
+
+I_Bit 00000080
+
+Symbol: I_Bit
+   Definitions
+      At line 40 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 458 in file Sourcecode\startup\LPC2300.s
+      At line 463 in file Sourcecode\startup\LPC2300.s
+      At line 468 in file Sourcecode\startup\LPC2300.s
+      At line 473 in file Sourcecode\startup\LPC2300.s
+      At line 478 in file Sourcecode\startup\LPC2300.s
+
+MAMCR_OFS 00000000
+
+Symbol: MAMCR_OFS
+   Definitions
+      At line 301 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 432 in file Sourcecode\startup\LPC2300.s
+Comment: MAMCR_OFS used once
+MAMCR_Val 00000002
+
+Symbol: MAMCR_Val
+   Definitions
+      At line 316 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 431 in file Sourcecode\startup\LPC2300.s
+Comment: MAMCR_Val used once
+MAMTIM_OFS 00000004
+
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Absolute symbols
+
+Symbol: MAMTIM_OFS
+   Definitions
+      At line 302 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 430 in file Sourcecode\startup\LPC2300.s
+Comment: MAMTIM_OFS used once
+MAMTIM_Val 00000004
+
+Symbol: MAMTIM_Val
+   Definitions
+      At line 317 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 429 in file Sourcecode\startup\LPC2300.s
+Comment: MAMTIM_Val used once
+MAM_BASE E01FC000
+
+Symbol: MAM_BASE
+   Definitions
+      At line 300 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 428 in file Sourcecode\startup\LPC2300.s
+Comment: MAM_BASE used once
+MAM_SETUP 00000001
+
+Symbol: MAM_SETUP
+   Definitions
+      At line 315 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 427 in file Sourcecode\startup\LPC2300.s
+Comment: MAM_SETUP used once
+MEMMAP E01FC040
+
+Symbol: MEMMAP
+   Definitions
+      At line 437 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: MEMMAP unused
+Mode_ABT 00000017
+
+Symbol: Mode_ABT
+   Definitions
+      At line 36 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 463 in file Sourcecode\startup\LPC2300.s
+Comment: Mode_ABT used once
+Mode_FIQ 00000011
+
+Symbol: Mode_FIQ
+   Definitions
+      At line 33 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 468 in file Sourcecode\startup\LPC2300.s
+Comment: Mode_FIQ used once
+Mode_IRQ 00000012
+
+Symbol: Mode_IRQ
+   Definitions
+      At line 34 in file Sourcecode\startup\LPC2300.s
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Absolute symbols
+
+   Uses
+      At line 473 in file Sourcecode\startup\LPC2300.s
+Comment: Mode_IRQ used once
+Mode_SVC 00000013
+
+Symbol: Mode_SVC
+   Definitions
+      At line 35 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 478 in file Sourcecode\startup\LPC2300.s
+Comment: Mode_SVC used once
+Mode_SYS 0000001F
+
+Symbol: Mode_SYS
+   Definitions
+      At line 38 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: Mode_SYS unused
+Mode_UND 0000001B
+
+Symbol: Mode_UND
+   Definitions
+      At line 37 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 458 in file Sourcecode\startup\LPC2300.s
+Comment: Mode_UND used once
+Mode_USR 00000010
+
+Symbol: Mode_USR
+   Definitions
+      At line 32 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 483 in file Sourcecode\startup\LPC2300.s
+Comment: Mode_USR used once
+OSCEN 00000020
+
+Symbol: OSCEN
+   Definitions
+      At line 94 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 375 in file Sourcecode\startup\LPC2300.s
+Comment: OSCEN used once
+OSCRANGE 00000010
+
+Symbol: OSCRANGE
+   Definitions
+      At line 93 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: OSCRANGE unused
+OSCSTAT 00000040
+
+Symbol: OSCSTAT
+   Definitions
+      At line 95 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 377 in file Sourcecode\startup\LPC2300.s
+Comment: OSCSTAT used once
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Absolute symbols
+
+PCLKSEL0_OFS 000001A8
+
+Symbol: PCLKSEL0_OFS
+   Definitions
+      At line 89 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 414 in file Sourcecode\startup\LPC2300.s
+Comment: PCLKSEL0_OFS used once
+PCLKSEL0_Val 00000000
+
+Symbol: PCLKSEL0_Val
+   Definitions
+      At line 295 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 413 in file Sourcecode\startup\LPC2300.s
+Comment: PCLKSEL0_Val used once
+PCLKSEL1_OFS 000001AC
+
+Symbol: PCLKSEL1_OFS
+   Definitions
+      At line 90 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 416 in file Sourcecode\startup\LPC2300.s
+Comment: PCLKSEL1_OFS used once
+PCLKSEL1_Val 00000000
+
+Symbol: PCLKSEL1_Val
+   Definitions
+      At line 296 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 415 in file Sourcecode\startup\LPC2300.s
+Comment: PCLKSEL1_Val used once
+PLLCFG_OFS 00000084
+
+Symbol: PLLCFG_OFS
+   Definitions
+      At line 82 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 384 in file Sourcecode\startup\LPC2300.s
+Comment: PLLCFG_OFS used once
+PLLCFG_Val 0000000C
+
+Symbol: PLLCFG_Val
+   Definitions
+      At line 292 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 383 in file Sourcecode\startup\LPC2300.s
+      At line 400 in file Sourcecode\startup\LPC2300.s
+
+PLLCON_OFS 00000080
+
+Symbol: PLLCON_OFS
+   Definitions
+      At line 81 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 388 in file Sourcecode\startup\LPC2300.s
+      At line 420 in file Sourcecode\startup\LPC2300.s
+
+PLLCON_PLLC 00000002
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Absolute symbols
+
+
+Symbol: PLLCON_PLLC
+   Definitions
+      At line 97 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 419 in file Sourcecode\startup\LPC2300.s
+Comment: PLLCON_PLLC used once
+PLLCON_PLLE 00000001
+
+Symbol: PLLCON_PLLE
+   Definitions
+      At line 96 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 387 in file Sourcecode\startup\LPC2300.s
+      At line 419 in file Sourcecode\startup\LPC2300.s
+
+PLLFEED_OFS 0000008C
+
+Symbol: PLLFEED_OFS
+   Definitions
+      At line 84 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 385 in file Sourcecode\startup\LPC2300.s
+      At line 386 in file Sourcecode\startup\LPC2300.s
+      At line 389 in file Sourcecode\startup\LPC2300.s
+      At line 390 in file Sourcecode\startup\LPC2300.s
+      At line 421 in file Sourcecode\startup\LPC2300.s
+      At line 422 in file Sourcecode\startup\LPC2300.s
+
+PLLSTAT_M 00007FFF
+
+Symbol: PLLSTAT_M
+   Definitions
+      At line 98 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 398 in file Sourcecode\startup\LPC2300.s
+Comment: PLLSTAT_M used once
+PLLSTAT_N 00FF0000
+
+Symbol: PLLSTAT_N
+   Definitions
+      At line 99 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 398 in file Sourcecode\startup\LPC2300.s
+Comment: PLLSTAT_N used once
+PLLSTAT_OFS 00000088
+
+Symbol: PLLSTAT_OFS
+   Definitions
+      At line 83 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 393 in file Sourcecode\startup\LPC2300.s
+      At line 397 in file Sourcecode\startup\LPC2300.s
+
+PLLSTAT_PLOCK 04000000
+
+Symbol: PLLSTAT_PLOCK
+   Definitions
+      At line 100 in file Sourcecode\startup\LPC2300.s
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Absolute symbols
+
+   Uses
+      At line 394 in file Sourcecode\startup\LPC2300.s
+Comment: PLLSTAT_PLOCK used once
+SCB_BASE E01FC000
+
+Symbol: SCB_BASE
+   Definitions
+      At line 80 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 367 in file Sourcecode\startup\LPC2300.s
+Comment: SCB_BASE used once
+SCS_OFS 000001A0
+
+Symbol: SCS_OFS
+   Definitions
+      At line 88 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 373 in file Sourcecode\startup\LPC2300.s
+      At line 376 in file Sourcecode\startup\LPC2300.s
+
+SCS_Val 00000020
+
+Symbol: SCS_Val
+   Definitions
+      At line 290 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 372 in file Sourcecode\startup\LPC2300.s
+      At line 375 in file Sourcecode\startup\LPC2300.s
+
+SVC_Stack_Size 00000008
+
+Symbol: SVC_Stack_Size
+   Definitions
+      At line 54 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 61 in file Sourcecode\startup\LPC2300.s
+      At line 480 in file Sourcecode\startup\LPC2300.s
+
+Stack_Size 00000508
+
+Symbol: Stack_Size
+   Definitions
+      At line 61 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 64 in file Sourcecode\startup\LPC2300.s
+      At line 66 in file Sourcecode\startup\LPC2300.s
+
+UND_Stack_Size 00000000
+
+Symbol: UND_Stack_Size
+   Definitions
+      At line 53 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 61 in file Sourcecode\startup\LPC2300.s
+      At line 460 in file Sourcecode\startup\LPC2300.s
+
+USBCLKCFG_OFS 00000108
+
+Symbol: USBCLKCFG_OFS
+
+
+
+ARM Macro Assembler    Page 8 Alphabetic symbol ordering
+Absolute symbols
+
+   Definitions
+      At line 86 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 410 in file Sourcecode\startup\LPC2300.s
+Comment: USBCLKCFG_OFS used once
+USBCLKCFG_Val 00000005
+
+Symbol: USBCLKCFG_Val
+   Definitions
+      At line 294 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 409 in file Sourcecode\startup\LPC2300.s
+Comment: USBCLKCFG_Val used once
+USR_Stack_Size 00000400
+
+Symbol: USR_Stack_Size
+   Definitions
+      At line 58 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 61 in file Sourcecode\startup\LPC2300.s
+      At line 485 in file Sourcecode\startup\LPC2300.s
+      At line 503 in file Sourcecode\startup\LPC2300.s
+
+51 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 490 in file Sourcecode\startup\LPC2300.s
+   Uses
+      At line 491 in file Sourcecode\startup\LPC2300.s
+Comment: __main used once
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 498 in file Sourcecode\startup\LPC2300.s
+   Uses
+      None
+Comment: __use_two_region_memory unused
+2 symbols
+415 symbols in table

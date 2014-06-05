@@ -1,0 +1,10 @@
+.\obj\ioport.o: Sourcecode\driver\Ioport.c
+.\obj\ioport.o: Sourcecode\driver\mcudef.h
+.\obj\ioport.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\ioport.o: Sourcecode\driver\pin_config.h
+.\obj\ioport.o: Sourcecode\driver\ioport.h
+.\obj\ioport.o: Sourcecode\driver\ir.h
+.\obj\ioport.o: Sourcecode\driver\..\main\debug.h
+.\obj\ioport.o: Sourcecode\driver\..\main\Macro.h
+.\obj\ioport.o: Sourcecode\driver\..\driver\timer.h
+.\obj\ioport.o: Sourcecode\driver\..\driver\Volume.h

@@ -1,0 +1,13 @@
+.\obj\eq_manager.o: Sourcecode\cs495300\Eq_Manager.c
+.\obj\eq_manager.o: c:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\obj\eq_manager.o: Sourcecode\cs495300\dspdrv.h
+.\obj\eq_manager.o: Sourcecode\cs495300\Eq_Manager.h
+.\obj\eq_manager.o: Sourcecode\cs495300\BassManager.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\driver\Dsp_Spi.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\driver\timer.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\driver\cs8416.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\driver\channel.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\driver\Eeprom.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\main\debug.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\main\Task.h
+.\obj\eq_manager.o: Sourcecode\cs495300\..\main\macro.h

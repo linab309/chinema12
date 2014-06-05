@@ -1,0 +1,101 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (Target 1), 0x0004 // Tools: 'ARM-ADS'
+GRPOPT 1,(startup),0,0,0
+GRPOPT 2,(main),1,0,0
+GRPOPT 3,(driver),1,0,0
+GRPOPT 4,(cs495300),0,0,0
+
+OPTFFF 1,1,2,0,0,0,0,0,<.\Sourcecode\startup\LPC2300.s><LPC2300.s> 
+OPTFFF 2,2,1,0,0,54,57,0,<.\Sourcecode\main\main.c><main.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,22,0,0,0,29,0,0,0,146,3,0,0,33,1,0,0 }
+OPTFFF 2,3,1,1,0,1,15,0,<.\Sourcecode\main\debug.c><debug.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,110,0,0,0,145,0,0,0,125,3,0,0,190,1,0,0 }
+OPTFFF 2,4,1,0,0,0,0,0,<.\Sourcecode\main\queue.c><queue.c> 
+OPTFFF 2,5,1,0,0,0,0,0,<.\Sourcecode\main\c11_msg_handler.c><c11_msg_handler.c> 
+OPTFFF 2,6,1,0,0,0,0,0,<.\Sourcecode\main\key_tab.c><key_tab.c> 
+OPTFFF 2,7,1,0,0,0,0,0,<.\Sourcecode\main\key_task.c><key_task.c> 
+OPTFFF 2,8,1,0,0,0,0,0,<.\Sourcecode\main\Menu_tbl.c><Menu_tbl.c> 
+OPTFFF 2,9,1,0,0,80,80,0,<.\Sourcecode\main\message.c><message.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,44,0,0,0,58,0,0,0,168,3,0,0,62,1,0,0 }
+OPTFFF 2,10,1,0,0,969,977,0,<.\Sourcecode\main\rs232_protocol.c><rs232_protocol.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,44,0,0,0,58,0,0,0,168,3,0,0,62,1,0,0 }
+OPTFFF 2,11,1,0,0,873,885,0,<.\Sourcecode\main\setup_func.c><setup_func.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,44,0,0,0,58,0,0,0,168,3,0,0,62,1,0,0 }
+OPTFFF 2,12,1,0,0,363,371,0,<.\Sourcecode\main\setup_menu.c><setup_menu.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,226,255,255,255,66,0,0,0,87,0,0,0,190,3,0,0,91,1,0,0 }
+OPTFFF 2,13,1,0,0,0,0,0,<.\Sourcecode\main\task.c><task.c> 
+OPTFFF 2,14,1,0,0,0,0,0,<.\Sourcecode\main\vfd_disp.c><vfd_disp.c> 
+OPTFFF 2,15,1,0,0,2602,2602,0,<.\Sourcecode\main\Zone1_task.c><Zone1_task.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,66,0,0,0,87,0,0,0,190,3,0,0,91,1,0,0 }
+OPTFFF 2,16,1,1,0,130,130,0,<.\Sourcecode\main\zone2_task.c><zone2_task.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,22,0,0,0,29,0,0,0,146,3,0,0,33,1,0,0 }
+OPTFFF 2,17,1,0,0,665,673,0,<.\Sourcecode\main\auto_sound.c><auto_sound.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,0,0,0,0,0,0,0,0,124,3,0,0,4,1,0,0 }
+OPTFFF 2,18,1,0,0,0,0,0,<.\Sourcecode\main\radio_task.c><radio_task.c> 
+OPTFFF 3,19,1,0,0,0,0,0,<.\Sourcecode\driver\uart.c><uart.c> 
+OPTFFF 3,20,1,0,0,0,0,0,<.\Sourcecode\driver\cs8416.c><cs8416.c> 
+OPTFFF 3,21,1,0,0,0,0,0,<.\Sourcecode\driver\dac.c><dac.c> 
+OPTFFF 3,22,1,0,0,0,0,0,<.\Sourcecode\driver\eeprom.c><eeprom.c> 
+OPTFFF 3,23,1,0,0,0,0,0,<.\Sourcecode\driver\i2cdrv.c><i2cdrv.c> 
+OPTFFF 3,24,1,0,0,0,0,0,<.\Sourcecode\driver\ic165.c><ic165.c> 
+OPTFFF 3,25,1,939524096,0,0,0,0,<.\Sourcecode\driver\IC4094.c><IC4094.c> 
+OPTFFF 3,26,1,0,0,0,0,0,<.\Sourcecode\driver\Ioport.c><Ioport.c> 
+OPTFFF 3,27,1,0,0,0,0,0,<.\Sourcecode\driver\ir.c><ir.c> 
+OPTFFF 3,28,1,0,0,0,0,0,<.\Sourcecode\driver\timer.c><timer.c> 
+OPTFFF 3,29,1,0,0,0,0,0,<.\Sourcecode\driver\vfddriver.c><vfddriver.c> 
+OPTFFF 3,30,1,0,0,174,179,0,<.\Sourcecode\driver\mas9116.c><mas9116.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,66,0,0,0,66,0,0,0,230,3,0,0,131,1,0,0 }
+OPTFFF 3,31,1,0,0,0,0,0,<.\Sourcecode\driver\volume.c><volume.c> 
+OPTFFF 3,32,1,0,0,0,0,0,<.\Sourcecode\driver\max335.c><max335.c> 
+OPTFFF 3,33,1,0,0,0,0,0,<.\Sourcecode\driver\channel.c><channel.c> 
+OPTFFF 3,34,1,0,0,0,0,0,<.\Sourcecode\driver\tuner.c><tuner.c> 
+OPTFFF 3,35,1,2,0,1,1,0,<.\Sourcecode\driver\hdmi.c><hdmi.c> { 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,88,0,0,0,88,0,0,0,252,3,0,0,153,1,0,0 }
+OPTFFF 3,36,1,0,0,0,0,0,<.\Sourcecode\driver\Dsp_Spi.c><Dsp_Spi.c> 
+OPTFFF 4,37,1,0,0,0,0,0,<.\Sourcecode\cs495300\AudioManager.c><AudioManager.c> 
+OPTFFF 4,38,1,0,0,0,0,0,<.\Sourcecode\cs495300\BassManager.c><BassManager.c> 
+OPTFFF 4,39,1,0,0,0,0,0,<.\Sourcecode\cs495300\DelayManager.c><DelayManager.c> 
+OPTFFF 4,40,1,0,0,0,0,0,<.\Sourcecode\cs495300\DolbyManager.c><DolbyManager.c> 
+OPTFFF 4,41,1,0,0,0,0,0,<.\Sourcecode\cs495300\DolbyProLogicII.c><DolbyProLogicII.c> 
+OPTFFF 4,42,1,0,0,0,0,0,<.\Sourcecode\cs495300\DolbyProLogicIIx.c><DolbyProLogicIIx.c> 
+OPTFFF 4,43,1,0,0,0,0,0,<.\Sourcecode\cs495300\Dsp_task.c><Dsp_task.c> 
+OPTFFF 4,44,1,0,0,0,0,0,<.\Sourcecode\cs495300\dspdrv.c><dspdrv.c> 
+OPTFFF 4,45,1,0,0,0,0,0,<.\Sourcecode\cs495300\DspInputOutputCfg.c><DspInputOutputCfg.c> 
+OPTFFF 4,46,1,0,0,0,0,0,<.\Sourcecode\cs495300\Eq_Manager.c><Eq_Manager.c> 
+OPTFFF 4,47,1,0,0,0,0,0,<.\Sourcecode\cs495300\Irc1_Manager.c><Irc1_Manager.c> 
+OPTFFF 4,48,1,0,0,0,0,0,<.\Sourcecode\cs495300\Irc2_Manager.c><Irc2_Manager.c> 
+OPTFFF 4,49,1,0,0,0,0,0,<.\Sourcecode\cs495300\OS_Manager.c><OS_Manager.c> 
+OPTFFF 4,50,1,0,0,0,0,0,<.\Sourcecode\cs495300\PCM_Manager.c><PCM_Manager.c> 
+OPTFFF 4,51,1,0,0,0,0,0,<.\Sourcecode\cs495300\SignalGenerator.c><SignalGenerator.c> 
+OPTFFF 4,52,1,0,0,0,0,0,<.\Sourcecode\cs495300\DTS_ES_Manager.c><DTS_ES_Manager.c> 
+OPTFFF 4,53,1,0,0,0,0,0,<.\Sourcecode\cs495300\DTS_Manager.c><DTS_Manager.c> 
+OPTFFF 4,54,1,0,0,0,0,0,<.\Sourcecode\cs495300\DTS_NEO6_Manager.c><DTS_NEO6_Manager.c> 
+OPTFFF 4,55,1,0,0,0,0,0,<.\Sourcecode\cs495300\DolbyPlusManager.c><DolbyPlusManager.c> 
+OPTFFF 4,56,1,0,0,0,0,0,<.\Sourcecode\cs495300\DolbyTrueHD.c><DolbyTrueHD.c> 
+OPTFFF 4,57,1,0,0,0,0,0,<.\Sourcecode\cs495300\DSP_API.c><DSP_API.c> 
+OPTFFF 4,58,1,0,0,0,0,0,<.\Sourcecode\cs495300\DolbyHeadphone.c><DolbyHeadphone.c> 
+
+
+TARGOPT 1, (Target 1)
+ ADSCLK=12000000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\lst\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 1,0,1
+  OPTAX 0
+  OPTBL 0,(Data Sheet)<DATASHTS\PHILIPS\LPC23xx_DS.PDF>
+  OPTBL 1,(User Manual)<DATASHTS\PHILIPS\LPC23xx24xx_UM.pdf>
+  OPTDL (SARM.DLL)(-cLPC2100)(DARMP.DLL)(-pLPC2366)(SARM.DLL)()(TARMP.DLL)(-pLPC2366)
+  OPTDBG 48125,0,()()()()()()()()()() (BIN\UL2ARM.DLL)()()()
+  OPTKEY 0,(DLGDARM)((134=-1,-1,-1,-1,0)(135=-1,-1,-1,-1,0)(107=-1,-1,-1,-1,0)(108=-1,-1,-1,-1,0)(106=-1,-1,-1,-1,0)(105=-1,-1,-1,-1,0)(80=-1,-1,-1,-1,0)(104=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(112=-1,-1,-1,-1,0)(136=-1,-1,-1,-1,0)(117=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(114=-1,-1,-1,-1,0)(115=-1,-1,-1,-1,0)(116=-1,-1,-1,-1,0))
+  OPTKEY 0,(ARMDBGFLAGS)(-T5F)
+  OPTKEY 0,(UL2ARM)(-U40296420 -O7 -S0 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP2_128 -FS00 -FL020000)
+  OPTBB 0,0,28,1,0,0,0,0,0,0,<Dsp_task.c>()()
+  OPTDF 0x40000082
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

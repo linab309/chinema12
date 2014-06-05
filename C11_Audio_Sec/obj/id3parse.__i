@@ -1,0 +1,1 @@
+ --thumb -c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\Sourcecode\driver -I "C:\Keil_4\ARM\INC" -I "C:\Keil_4\ARM\INC\Philips" -o ".\obj\id3parse.o" --omf_browse ".\obj\id3parse.crf" --depend ".\obj\id3parse.d" "Sourcecode\driver\HDRADIO_API\id3parse.c"

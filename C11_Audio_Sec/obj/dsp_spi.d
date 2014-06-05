@@ -1,0 +1,11 @@
+.\obj\dsp_spi.o: Sourcecode\driver\Dsp_Spi.c
+.\obj\dsp_spi.o: Sourcecode\driver\ioport.h
+.\obj\dsp_spi.o: Sourcecode\driver\mcudef.h
+.\obj\dsp_spi.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\dsp_spi.o: Sourcecode\driver\pin_config.h
+.\obj\dsp_spi.o: Sourcecode\driver\Dsp_Spi.h
+.\obj\dsp_spi.o: Sourcecode\driver\..\cs495300\Dspdrv.h
+.\obj\dsp_spi.o: Sourcecode\driver\..\main\debug.h
+.\obj\dsp_spi.o: Sourcecode\driver\..\main\macro.h
+.\obj\dsp_spi.o: Sourcecode\driver\..\main\task.h
+.\obj\dsp_spi.o: Sourcecode\driver\..\driver\channel.h

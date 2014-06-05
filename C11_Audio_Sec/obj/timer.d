@@ -1,0 +1,11 @@
+.\obj\timer.o: Sourcecode\driver\timer.c
+.\obj\timer.o: Sourcecode\driver\mcudef.h
+.\obj\timer.o: c:\Keil\ARM\Inc\Philips\LPC23xx.H
+.\obj\timer.o: Sourcecode\driver\pin_config.h
+.\obj\timer.o: Sourcecode\driver\timer.h
+.\obj\timer.o: Sourcecode\driver\ioport.h
+.\obj\timer.o: Sourcecode\driver\..\main\task.h
+.\obj\timer.o: Sourcecode\driver\..\main\macro.h
+.\obj\timer.o: Sourcecode\driver\..\main\vfd_disp.h
+.\obj\timer.o: Sourcecode\driver\..\main\Radio_task.h
+.\obj\timer.o: Sourcecode\driver\..\main\Queue.h

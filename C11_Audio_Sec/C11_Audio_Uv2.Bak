@@ -1,0 +1,159 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (Target 1), 0x0004 // Tools: 'ARM-ADS'
+
+Group (startup)
+Group (main)
+Group (driver)
+Group (cs495300)
+
+File 1,2,<.\Sourcecode\startup\LPC2300.s><LPC2300.s> 0x48225B1E 
+File 2,1,<.\Sourcecode\main\main.c><main.c> 0x4CBC0DB9 
+File 2,1,<.\Sourcecode\main\debug.c><debug.c> 0x4C5B7BA3 
+File 2,1,<.\Sourcecode\main\queue.c><queue.c> 0x49211EC8 
+File 2,1,<.\Sourcecode\main\c11_msg_handler.c><c11_msg_handler.c> 0x4C6C86DF 
+File 2,1,<.\Sourcecode\main\key_tab.c><key_tab.c> 0x47A2C396 
+File 2,1,<.\Sourcecode\main\key_task.c><key_task.c> 0x4C8EE8B5 
+File 2,1,<.\Sourcecode\main\Menu_tbl.c><Menu_tbl.c> 0x4C8EEA30 
+File 2,1,<.\Sourcecode\main\message.c><message.c> 0x4822AA0A 
+File 2,1,<.\Sourcecode\main\rs232_protocol.c><rs232_protocol.c> 0x4C96C21A 
+File 2,1,<.\Sourcecode\main\setup_func.c><setup_func.c> 0x4CB57B83 
+File 2,1,<.\Sourcecode\main\setup_menu.c><setup_menu.c> 0x4C916FFA 
+File 2,1,<.\Sourcecode\main\task.c><task.c> 0x48086610 
+File 2,1,<.\Sourcecode\main\vfd_disp.c><vfd_disp.c> 0x490BD196 
+File 2,1,<.\Sourcecode\main\Zone1_task.c><Zone1_task.c> 0x4CB80917 
+File 2,1,<.\Sourcecode\main\zone2_task.c><zone2_task.c> 0x4C8EEFFD 
+File 2,1,<.\Sourcecode\main\auto_sound.c><auto_sound.c> 0x4CB2B125 
+File 2,1,<.\Sourcecode\main\radio_task.c><radio_task.c> 0x4CBFDB71 
+File 3,1,<.\Sourcecode\driver\uart.c><uart.c> 0x49211E5C 
+File 3,1,<.\Sourcecode\driver\cs8416.c><cs8416.c> 0x49C19DA0 
+File 3,1,<.\Sourcecode\driver\dac.c><dac.c> 0x4C9038B1 
+File 3,1,<.\Sourcecode\driver\eeprom.c><eeprom.c> 0x49C1EC06 
+File 3,1,<.\Sourcecode\driver\i2cdrv.c><i2cdrv.c> 0x48A3D514 
+File 3,1,<.\Sourcecode\driver\ic165.c><ic165.c> 0x48D83F7A 
+File 3,1,<.\Sourcecode\driver\IC4094.c><IC4094.c> 0x4A9F8BD2 
+File 3,1,<.\Sourcecode\driver\Ioport.c><Ioport.c> 0x4B9F2542 
+File 3,1,<.\Sourcecode\driver\ir.c><ir.c> 0x481FB6C6 
+File 3,1,<.\Sourcecode\driver\timer.c><timer.c> 0x4C885005 
+File 3,1,<.\Sourcecode\driver\vfddriver.c><vfddriver.c> 0x49C19E32 
+File 3,1,<.\Sourcecode\driver\mas9116.c><mas9116.c> 0x4CB581A4 
+File 3,1,<.\Sourcecode\driver\volume.c><volume.c> 0x4C91EA1E 
+File 3,1,<.\Sourcecode\driver\max335.c><max335.c> 0x4C8F0DAF 
+File 3,1,<.\Sourcecode\driver\channel.c><channel.c> 0x4CB2C46F 
+File 3,1,<.\Sourcecode\driver\tuner.c><tuner.c> 0x492E357C 
+File 3,1,<.\Sourcecode\driver\hdmi.c><hdmi.c> 0x4CBFC468 
+File 3,1,<.\Sourcecode\driver\Dsp_Spi.c><Dsp_Spi.c> 0x4C8F4B69 
+File 4,1,<.\Sourcecode\cs495300\AudioManager.c><AudioManager.c> 0x4AA8AF4E 
+File 4,1,<.\Sourcecode\cs495300\BassManager.c><BassManager.c> 0x49BF4F72 
+File 4,1,<.\Sourcecode\cs495300\DelayManager.c><DelayManager.c> 0x492E32E4 
+File 4,1,<.\Sourcecode\cs495300\DolbyManager.c><DolbyManager.c> 0x49B75C50 
+File 4,1,<.\Sourcecode\cs495300\DolbyProLogicII.c><DolbyProLogicII.c> 0x483BDD30 
+File 4,1,<.\Sourcecode\cs495300\DolbyProLogicIIx.c><DolbyProLogicIIx.c> 0x48EA04E4 
+File 4,1,<.\Sourcecode\cs495300\Dsp_task.c><Dsp_task.c> 0x4CB57C0E 
+File 4,1,<.\Sourcecode\cs495300\dspdrv.c><dspdrv.c> 0x4CB57C12 
+File 4,1,<.\Sourcecode\cs495300\DspInputOutputCfg.c><DspInputOutputCfg.c> 0x486F34BA 
+File 4,1,<.\Sourcecode\cs495300\Eq_Manager.c><Eq_Manager.c> 0x4C8F4BCE 
+File 4,1,<.\Sourcecode\cs495300\Irc1_Manager.c><Irc1_Manager.c> 0x4CB27243 
+File 4,1,<.\Sourcecode\cs495300\Irc2_Manager.c><Irc2_Manager.c> 0x4CA451DC 
+File 4,1,<.\Sourcecode\cs495300\OS_Manager.c><OS_Manager.c> 0x494F4474 
+File 4,1,<.\Sourcecode\cs495300\PCM_Manager.c><PCM_Manager.c> 0x49192502 
+File 4,1,<.\Sourcecode\cs495300\SignalGenerator.c><SignalGenerator.c> 0x48BC9970 
+File 4,1,<.\Sourcecode\cs495300\DTS_ES_Manager.c><DTS_ES_Manager.c> 0x483BDC84 
+File 4,1,<.\Sourcecode\cs495300\DTS_Manager.c><DTS_Manager.c> 0x483BDC6E 
+File 4,1,<.\Sourcecode\cs495300\DTS_NEO6_Manager.c><DTS_NEO6_Manager.c> 0x48EB1566 
+File 4,1,<.\Sourcecode\cs495300\DolbyPlusManager.c><DolbyPlusManager.c> 0x483BDC52 
+File 4,1,<.\Sourcecode\cs495300\DolbyTrueHD.c><DolbyTrueHD.c> 0x4993E142 
+File 4,1,<.\Sourcecode\cs495300\DSP_API.c><DSP_API.c> 0x49B7875C 
+File 4,1,<.\Sourcecode\cs495300\DolbyHeadphone.c><DolbyHeadphone.c> 0x48C0839E 
+
+
+Options 1,0,0  // Target 'Target 1'
+ Device (LPC2366)
+ Vendor (NXP (founded by Philips))
+ Cpu (IRAM(0x40000000-0x4000E7FF) IROM(0-0x3FFFF) CLOCK(12000000) CPUTYPE(ARM7TDMI))
+ FlashUt (LPC210x_ISP.EXE ("#H" ^X $D COM1: 38400 1))
+ StupF ("STARTUP\Philips\LPC2300.s" ("Philips LPC2300 Startup Code"))
+ FlashDR (UL2ARM(-U40296420 -O7 -S0 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP2_256 -FS00 -FL040000))
+ DevID (4151)
+ Rgf (LPC23xx.H)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿPhilips\)
+ OrgReg (ÿPhilips\)
+ TgStat=16
+ OutDir (.\obj\)
+ OutName (C11_Audio12)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\lst\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 1 <c:\keil\arm\bin30\fromelf.exe obj\c11_audio.axf -z>
+ RunUsr 1 1 <find "Total R" D:\C11_Audio_Sec\lst\c11_audio.map>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 243,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP (ARM7TDMI)
+ ADSTFLGA { 0,12,0,2,99,4,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,64,0,232,0,0 }
+ OCMADSIROM { 1,0,0,0,0,0,0,4,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,232,0,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN ()
+ ADSCUDEF ()
+ ADSCINCD (.\Sourcecode\driver)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x00000000)
+ ADSLDDA (0x40000000)
+ ADSLDSC ()
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARM.DLL)(-cLPC2100)(DARMP.DLL)(-pLPC2366)(SARM.DLL)()(TARMP.DLL)(-pLPC2366)
+  OPTDBG 48125,0,()()()()()()()()()() (BIN\UL2ARM.DLL)()()()
+ FLASH1 { 2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (BIN\UL2ARM.DLL)
+ FLASH3 (LPC210x_ISP.EXE ("#H" ^X $D COM1: 38400 1))
+ FLASH4 ()
+EndOpt
+
